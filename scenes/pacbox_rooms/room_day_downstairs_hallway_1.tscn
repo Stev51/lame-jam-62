@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://d1rbhxw3g7gn6"]
 
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="1_fie3p"]
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_mgti1"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="2_mgti1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fie3p"]
 size = Vector2(128, 128)
 
 [node name="RoomDayDownstairsHallway1" type="Node2D" unique_id=285811660]
+script = ExtResource("1_mgti1")
+display_name = "Downstairs Hallway"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
 centered = false

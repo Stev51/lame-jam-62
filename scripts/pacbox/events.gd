@@ -30,6 +30,10 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_day_downstairs_hallway_2")
 			
+		"day_study_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_1")
+			
 		"demo_event_go_room1":
 			
 			PACBox.fade_to_room("demo_room_1")

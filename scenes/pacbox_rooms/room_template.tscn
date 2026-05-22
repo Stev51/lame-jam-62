@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://ca2qxrtfd0oqh"]
 
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_hkkqs"]
+
 [node name="RoomTemplate" type="Node2D" unique_id=285811660]
+script = ExtResource("1_hkkqs")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
 centered = false

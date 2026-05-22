@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ceig62q1rlt51"]
+
+[node name="GUI" type="Control" unique_id=1259786410]
+z_index = 99
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RoomDisplay" type="Control" parent="." unique_id=1993066591]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="RoomDisplay" unique_id=751797784]
+layout_mode = 0
+offset_left = 210.0
+offset_right = 320.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RoomDisplay" unique_id=126124744]
+layout_mode = 0
+offset_left = 210.0
+offset_right = 320.0
+offset_bottom = 16.0
+theme_override_font_sizes/normal_font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoalDisplay" type="Control" parent="." unique_id=1901586658]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

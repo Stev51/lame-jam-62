@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://cq04lku3m5dlm"]
 
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="1_p61jj"]
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_r8tnk"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_r8tnk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h5wg"]
 size = Vector2(128, 128)
 
 [node name="RoomDayFoyer" type="Node2D" unique_id=285811660]
+script = ExtResource("1_r8tnk")
+display_name = "Foyer"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
 centered = false
