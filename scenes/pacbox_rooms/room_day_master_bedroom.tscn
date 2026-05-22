@@ -4,9 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_ifnyx"]
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="3_ifnyx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_stimi"]
-size = Vector2(128, 128)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3oiu"]
 size = Vector2(128, 128)
 
@@ -20,11 +17,8 @@ centered = false
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
 [node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("2_ifnyx")]
-position = Vector2(165, 214)
+position = Vector2(160, 220)
 event_id = "day_master_bedroom_back"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway" unique_id=1121390279]
-shape = SubResource("RectangleShape2D_stimi")
 
 [node name="Bathroom" parent="Clickers" unique_id=1920020199 instance=ExtResource("3_ifnyx")]
 position = Vector2(37, 103)

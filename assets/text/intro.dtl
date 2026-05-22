@@ -1,3 +1,15 @@
 [style name="dialogic_borderless_style"]
-you moved into a new house
-isnt that crazy insano
+You moved into a new house about a month ago.
+[wait_input]
+You're still getting used to the layout.\
+\
+It's bigger than you're used to.\
+\
+But it's nice.
+[wait_input]
+There are only a few boxes left to unpack now.
+[wait_input]
+Tonight you decided to hang up the pictures on the walls.
+[wait_input]
+It'll help the rooms feel less empty.
+[wait_input]

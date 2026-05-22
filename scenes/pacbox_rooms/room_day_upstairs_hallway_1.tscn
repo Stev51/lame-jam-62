@@ -18,18 +18,13 @@ centered = false
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
 [node name="BackToStairs" parent="Clickers" unique_id=881771067 instance=ExtResource("2_ftiu8")]
-position = Vector2(161, 212)
+position = Vector2(160, 220)
 event_id = "day_upstairs_hallway_1_back"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToStairs" unique_id=878861131]
-shape = SubResource("RectangleShape2D_7rs6l")
-
 [node name="Hallway" parent="Clickers" unique_id=300355399 instance=ExtResource("2_ftiu8")]
-position = Vector2(160, 28)
+position = Vector2(160, 20)
+rotation = 3.1415927
 event_id = "day_upstairs_hallway_1_to_hallway_2"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway" unique_id=1837904456]
-shape = SubResource("RectangleShape2D_7rs6l")
 
 [node name="Bedroom" parent="Clickers" unique_id=1245830838 instance=ExtResource("3_7rs6l")]
 position = Vector2(30, 113)

@@ -1,26 +1,32 @@
 [gd_scene format=3 uid="uid://du827lwfxfd8k"]
 
 [ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="1_cy3fa"]
-[ext_resource type="Texture2D" uid="uid://cve5y8yu2u00b" path="res://assets/img/icon.svg" id="2_yyc54"]
-[ext_resource type="Texture2D" uid="uid://d10j5vhahsdjd" path="res://assets/img/hover.png" id="3_camgt"]
+[ext_resource type="Texture2D" uid="uid://dud7ea0uebirh" path="res://assets/img/back_button.png" id="2_camgt"]
 [ext_resource type="AudioStream" uid="uid://dnboblpkf0fqi" path="res://addons/dialogic/Example Assets/sound-effects/typing3.wav" id="4_mdtfi"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="5_ejdnx"]
 
-[node name="ButtonClicker" unique_id=881771067 instance=ExtResource("1_cy3fa")]
-scale = Vector2(0.25, 0.25)
-still_image = ExtResource("2_yyc54")
-hover_image = ExtResource("3_camgt")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl6ya"]
+size = Vector2(34, 16)
+
+[node name="ButtonClicker" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("1_cy3fa")]
+still_image = ExtResource("2_camgt")
+hover_shape = NodePath("HoverShape")
 hover_sound = ExtResource("4_mdtfi")
 click_sound = ExtResource("5_ejdnx")
 
 [node name="StillImg" parent="." index="0" unique_id=1733266705]
-texture = ExtResource("2_yyc54")
-
-[node name="HoverImg" parent="." index="2" unique_id=1068636024]
-texture = ExtResource("3_camgt")
+texture = ExtResource("2_camgt")
 
 [node name="HoverSound" parent="." index="3" unique_id=1030558179]
 stream = ExtResource("4_mdtfi")
 
 [node name="ClickSound" parent="." index="4" unique_id=1933397200]
 stream = ExtResource("5_ejdnx")
+
+[node name="HoverShape" type="Polygon2D" parent="." index="5" unique_id=662334625]
+visible = false
+color = Color(1, 1, 1, 0.2509804)
+polygon = PackedVector2Array(-17, -8, -17, 8, 17, 8, 17, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="6" unique_id=1641533218]
+shape = SubResource("RectangleShape2D_kl6ya")

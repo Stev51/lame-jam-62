@@ -12,6 +12,7 @@ enum DisplayMode {STILL_IMAGE, ANIMATED_IMAGE, HIDDEN_IMAGE}
 @export var click_sound: AudioStream
 @export var event_id: String = "DEFAULT"
 @export var flag_id: String = ""
+@export var invert_flag: bool = false
 
 @onready var still_sprite_node = $StillImg
 @onready var anim_sprite_node = $AnimImg
@@ -25,7 +26,12 @@ var hoverable = true
 func _ready() -> void:
 	
 	if not flag_id.is_empty():
-		if not PACBox.get_flag(flag_id):
+		
+		var check_flag = PACBox.get_flag(flag_id)
+		if invert_flag:
+			check_flag = not check_flag
+		
+		if not check_flag:
 			visible = false
 	
 	still_sprite_node.texture = still_image

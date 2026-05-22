@@ -17,11 +17,8 @@ centered = false
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
 [node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("2_7cgx2")]
-position = Vector2(160, 205)
+position = Vector2(160, 220)
 event_id = "day_upstairs_hallway_4_back"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway" unique_id=1381129511]
-shape = SubResource("RectangleShape2D_t1v0i")
 
 [node name="MasterBedroom" parent="Clickers" unique_id=729301203 instance=ExtResource("3_t1v0i")]
 position = Vector2(36, 59)

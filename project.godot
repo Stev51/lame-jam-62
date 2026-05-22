@@ -32,6 +32,7 @@ directories/dtl_directory={
 "demo_timeline_1": "res://assets/text/demo_timeline_1.dtl",
 "demo_timeline_2": "res://assets/text/demo_timeline_2.dtl",
 "demo_timeline_3": "res://assets/text/demo_timeline_3.dtl",
+"get_photos": "res://assets/text/get_photos.dtl",
 "intro": "res://assets/text/intro.dtl"
 }
 layout/style_directory={
@@ -110,6 +111,9 @@ dialogic_default_action={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

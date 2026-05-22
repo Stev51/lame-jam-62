@@ -17,18 +17,13 @@ centered = false
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
 [node name="BackToLivingRoom" parent="Clickers" unique_id=881771067 instance=ExtResource("1_fie3p")]
-position = Vector2(154, 213)
+position = Vector2(160, 220)
 event_id = "day_downstairs_hallway_1_back"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToLivingRoom" unique_id=1723133805]
-shape = SubResource("RectangleShape2D_fie3p")
-
 [node name="Stairs" parent="Clickers" unique_id=1172884389 instance=ExtResource("1_fie3p")]
-position = Vector2(23, 114)
+position = Vector2(20, 120)
+rotation = 1.5707964
 event_id = "day_downstairs_hallway_1_to_stairs"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Stairs" unique_id=439729147]
-shape = SubResource("RectangleShape2D_fie3p")
 
 [node name="StudyDoor" parent="Clickers" unique_id=408616589 instance=ExtResource("2_mgti1")]
 position = Vector2(72, 53)
@@ -45,8 +40,6 @@ event_id = "day_downstairs_hallway_1_to_foyer"
 shape = SubResource("RectangleShape2D_fie3p")
 
 [node name="Hallway2" parent="Clickers" unique_id=991487722 instance=ExtResource("1_fie3p")]
-position = Vector2(293, 115)
+position = Vector2(300, 120)
+rotation = -1.5707964
 event_id = "day_downstairs_hallway_1_to_hallway_2"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway2" unique_id=119587352]
-shape = SubResource("RectangleShape2D_fie3p")

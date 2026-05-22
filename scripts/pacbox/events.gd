@@ -50,6 +50,13 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_day_downstairs_hallway_3")
 			
+		"get_photos":
+			
+			PACBox.queue_dialog("get_photos")
+			await Dialogic.timeline_ended
+			
+			PACBox.set_flag("got_photos")
+			
 		"day_downstairs_hallway_2_back":
 			
 			PACBox.fade_to_room("room_day_downstairs_hallway_1")

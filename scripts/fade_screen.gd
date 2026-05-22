@@ -7,7 +7,7 @@ signal fade_in_finished
 @onready var anim_player = $AnimationPlayer
 
 func _ready() -> void:
-	color_rect.visible = false
+	color_rect.visible = true
 
 func fade_out() -> void:
 	color_rect.visible = true
@@ -18,9 +18,22 @@ func fade_in() -> void:
 	await fade_in_finished
 	color_rect.visible = false
 
+func fade_out_slow() -> void:
+	color_rect.visible = true
+	anim_player.play("fade_out_slow")
+
+func fade_in_slow() -> void:
+	anim_player.play("fade_in_slow")
+	await fade_in_finished
+	color_rect.visible = false
+
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	match anim_name:
 		"fade_out":
 			fade_out_finished.emit()
 		"fade_in":
+			fade_in_finished.emit()
+		"fade_out_slow":
+			fade_out_finished.emit()
+		"fade_in_slow":
 			fade_in_finished.emit()

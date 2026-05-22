@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_uib5n"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_y8a7v"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_stimi"]
-size = Vector2(128, 128)
-
 [node name="RoomDayBedroom1" type="Node2D" unique_id=285811660]
 script = ExtResource("1_uib5n")
 display_name = "Bedroom"
@@ -16,8 +13,5 @@ centered = false
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
 [node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("2_y8a7v")]
-position = Vector2(165, 214)
+position = Vector2(160, 220)
 event_id = "day_bedroom_1_back"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway" unique_id=1121390279]
-shape = SubResource("RectangleShape2D_stimi")

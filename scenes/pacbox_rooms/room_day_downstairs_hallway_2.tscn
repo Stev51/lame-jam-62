@@ -7,9 +7,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yg4ub"]
 size = Vector2(128, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4qcp"]
-size = Vector2(128, 128)
-
 [node name="RoomDayDownstairsHallway2" type="Node2D" unique_id=285811660]
 script = ExtResource("1_q8pog")
 display_name = "Downstairs Hallway"
@@ -20,11 +17,8 @@ centered = false
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
 [node name="BackToHallway1" parent="Clickers" unique_id=881771067 instance=ExtResource("2_8c7lk")]
-position = Vector2(154, 213)
+position = Vector2(160, 220)
 event_id = "day_downstairs_hallway_2_back"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway1" unique_id=164874906]
-shape = SubResource("RectangleShape2D_yg4ub")
 
 [node name="DiningRoom" parent="Clickers" unique_id=2123968157 instance=ExtResource("3_yg4ub")]
 position = Vector2(40, 56)
@@ -41,8 +35,6 @@ event_id = "day_downstairs_hallway_2_to_kitchen"
 shape = SubResource("RectangleShape2D_yg4ub")
 
 [node name="Hallway3" parent="Clickers" unique_id=1062516812 instance=ExtResource("2_8c7lk")]
-position = Vector2(290, 129)
+position = Vector2(300, 120)
+rotation = -1.5707964
 event_id = "day_downstairs_hallway_2_to_hallway_3"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway3" unique_id=1805141745]
-shape = SubResource("RectangleShape2D_o4qcp")

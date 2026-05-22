@@ -6,6 +6,7 @@ extends Node2D
 @onready var room_node = $Room
 @onready var gui_node = $GUI
 
+var current_room = null
 var hoverable = true
 
 func _ready() -> void:
@@ -40,8 +41,12 @@ func get_flag(key: String) -> bool:
 
 # Returns true if flag already existed
 func set_flag(key: String, val: bool = true) -> bool:
+	
 	var ret_val = (key in flags.flags)
 	flags.flags[key] = val
+	
+	switch_room(current_room)
+	
 	return ret_val
 
 func fade_to_room(id: String) -> bool:
@@ -77,6 +82,7 @@ func switch_room(id: String) -> bool:
 	room_node.add_child(new_room)
 	gui_node.update_room_text(new_room.display_name)
 	
+	current_room = id
 	hoverable = true
 	
 	return true
