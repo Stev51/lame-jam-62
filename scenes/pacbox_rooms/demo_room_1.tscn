@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cqptjhdeh4se5" path="res://assets/img/bg/bg1.jpg" id="1_08j2g"]
 [ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="1_bdqe5"]
 [ext_resource type="Texture2D" uid="uid://cve5y8yu2u00b" path="res://assets/img/icon.svg" id="2_u5lcn"]
+[ext_resource type="Texture2D" uid="uid://d10j5vhahsdjd" path="res://assets/img/hover.png" id="4_iwqjt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3oo3"]
 size = Vector2(128, 128)
@@ -20,6 +21,7 @@ centered = false
 position = Vector2(39, 43)
 scale = Vector2(0.40023592, 0.40023592)
 still_image = ExtResource("2_u5lcn")
+hover_image = ExtResource("4_iwqjt")
 event_id = "demo_event_dialog_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Clicker1" unique_id=1353480532]
@@ -29,6 +31,7 @@ shape = SubResource("RectangleShape2D_q3oo3")
 position = Vector2(264, 43.00001)
 scale = Vector2(0.40364337, 0.40364337)
 still_image = ExtResource("2_u5lcn")
+hover_image = ExtResource("4_iwqjt")
 event_id = "demo_event_go_room2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Clicker2" unique_id=1250612019]
@@ -38,6 +41,7 @@ shape = SubResource("RectangleShape2D_q3oo3")
 position = Vector2(164, 176)
 scale = Vector2(0.40293288, 0.40293288)
 still_image = ExtResource("2_u5lcn")
+hover_image = ExtResource("4_iwqjt")
 event_id = "demo_event_dialog_3"
 flag_id = "demo_flag"
 
