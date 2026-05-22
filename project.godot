@@ -27,15 +27,16 @@ directories/dch_directory={}
 directories/dtl_directory={
 "demo_timeline_1": "res://assets/text/demo_timeline_1.dtl",
 "demo_timeline_2": "res://assets/text/demo_timeline_2.dtl",
-"demo_timeline_3": "res://assets/text/demo_timeline_3.dtl"
+"demo_timeline_3": "res://assets/text/demo_timeline_3.dtl",
+"intro": "res://assets/text/intro.dtl"
 }
 layout/style_directory={
-"": "res://resources/dialogic_borderless_style.tres",
+"": "res://resources/dialogic_default_style.tres",
 "dialogic_borderless_style": "res://resources/dialogic_borderless_style.tres",
 "dialogic_default_style": "res://resources/dialogic_default_style.tres"
 }
 layout/style_list=["res://resources/dialogic_default_style.tres", "res://resources/dialogic_borderless_style.tres"]
-layout/default_style="res://resources/dialogic_borderless_style.tres"
+layout/default_style="res://resources/dialogic_default_style.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
