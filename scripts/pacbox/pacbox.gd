@@ -4,6 +4,7 @@ extends Node2D
 @onready var flags = Flags.new()
 
 @onready var room_node = $Room
+@onready var gui_node = $GUI
 
 var hoverable = true
 
@@ -74,6 +75,7 @@ func switch_room(id: String) -> bool:
 		child.queue_free()
 	
 	room_node.add_child(new_room)
+	gui_node.update_room_text(new_room.display_name)
 	
 	hoverable = true
 	

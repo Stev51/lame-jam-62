@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ceig62q1rlt51"]
 
+[ext_resource type="Script" uid="uid://86tnol7lnxwh" path="res://scripts/gui.gd" id="1_efmwq"]
+
 [node name="GUI" type="Control" unique_id=1259786410]
 z_index = 99
 layout_mode = 3
@@ -8,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_efmwq")
 
 [node name="RoomDisplay" type="Control" parent="." unique_id=1993066591]
 anchors_preset = 0

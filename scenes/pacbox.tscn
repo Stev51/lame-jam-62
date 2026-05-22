@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://c186q2k21dmw6"]
 
 [ext_resource type="Script" uid="uid://cwh73vxracxx5" path="res://scripts/pacbox/pacbox.gd" id="1_smwuo"]
+[ext_resource type="PackedScene" uid="uid://ceig62q1rlt51" path="res://scenes/gui.tscn" id="2_v2que"]
 
 [node name="PACBox" type="Node2D" unique_id=191530559]
 script = ExtResource("1_smwuo")
 
 [node name="Room" type="Node2D" parent="." unique_id=635444880]
+
+[node name="GUI" parent="." unique_id=1259786410 instance=ExtResource("2_v2que")]
