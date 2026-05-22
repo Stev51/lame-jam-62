@@ -10,13 +10,15 @@ size = Vector2(128, 128)
 [node name="DemoRoom1" type="Node2D" unique_id=285811660]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1243415851]
+scale = Vector2(0.33554554, 0.33554554)
 texture = ExtResource("1_08j2g")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
 [node name="Clicker1" parent="Clickers" unique_id=881771067 instance=ExtResource("1_bdqe5")]
-position = Vector2(312, 157)
+position = Vector2(39, 43)
+scale = Vector2(0.40023592, 0.40023592)
 still_image = ExtResource("2_u5lcn")
 event_id = "demo_event_dialog_1"
 
@@ -24,7 +26,8 @@ event_id = "demo_event_dialog_1"
 shape = SubResource("RectangleShape2D_q3oo3")
 
 [node name="Clicker2" parent="Clickers" unique_id=278429788 instance=ExtResource("1_bdqe5")]
-position = Vector2(816, 156)
+position = Vector2(264, 43.00001)
+scale = Vector2(0.40364337, 0.40364337)
 still_image = ExtResource("2_u5lcn")
 event_id = "demo_event_go_room2"
 
@@ -32,7 +35,8 @@ event_id = "demo_event_go_room2"
 shape = SubResource("RectangleShape2D_q3oo3")
 
 [node name="Clicker3" parent="Clickers" unique_id=900598952 instance=ExtResource("1_bdqe5")]
-position = Vector2(586, 498)
+position = Vector2(164, 176)
+scale = Vector2(0.40293288, 0.40293288)
 still_image = ExtResource("2_u5lcn")
 event_id = "demo_event_dialog_3"
 flag_id = "demo_flag"
