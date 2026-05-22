@@ -2,6 +2,34 @@ class_name Events extends Node
 
 func call_event(id: String) -> void:
 	match id:
+		"day_front_door":
+			
+			PACBox.queue_dialog("day_front_door")
+			
+		"day_foyer_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_1")
+			
+		"day_hallway_1_back":
+			
+			PACBox.fade_to_room("room_day_living_room")
+			
+		"day_hallway_1_to_stairs":
+			
+			PACBox.fade_to_room("room_day_downstairs_stairs")
+			
+		"day_hallway_1_to_study":
+			
+			PACBox.fade_to_room("room_day_study")
+			
+		"day_hallway_1_to_foyer":
+			
+			PACBox.fade_to_room("room_day_foyer")
+			
+		"day_hallway_1_to_hallway_2":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_2")
+			
 		"demo_event_go_room1":
 			
 			PACBox.fade_to_room("demo_room_1")

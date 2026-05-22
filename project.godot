@@ -25,6 +25,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 directories/dch_directory={}
 directories/dtl_directory={
+"day_front_door": "res://assets/text/day_front_door.dtl",
 "demo_timeline_1": "res://assets/text/demo_timeline_1.dtl",
 "demo_timeline_2": "res://assets/text/demo_timeline_2.dtl",
 "demo_timeline_3": "res://assets/text/demo_timeline_3.dtl",

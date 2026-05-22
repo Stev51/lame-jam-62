@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cq04lku3m5dlm"]
+
+[ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="1_p61jj"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_r8tnk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h5wg"]
+size = Vector2(128, 128)
+
+[node name="RoomDayFoyer" type="Node2D" unique_id=285811660]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="FrontDoor" parent="Clickers" unique_id=881771067 instance=ExtResource("1_p61jj")]
+position = Vector2(162, 67)
+event_id = "day_front_door"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/FrontDoor" unique_id=1775768326]
+shape = SubResource("RectangleShape2D_2h5wg")
+
+[node name="BackToHallway1" parent="Clickers" unique_id=9363140 instance=ExtResource("2_r8tnk")]
+position = Vector2(165, 214)
+event_id = "day_foyer_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway1" unique_id=737346636]
+shape = SubResource("RectangleShape2D_2h5wg")

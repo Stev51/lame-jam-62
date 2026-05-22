@@ -7,4 +7,4 @@ func _ready() -> void:
 	await Dialogic.timeline_ended
 	'''
 	
-	PACBox.start("demo_room_1")
+	PACBox.start("room_day_foyer")
