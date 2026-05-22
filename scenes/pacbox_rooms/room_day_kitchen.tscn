@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dsalmfn4hwtjc"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_ketkj"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_s5ags"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stimi"]
+size = Vector2(128, 128)
+
+[node name="RoomDayKitchen" type="Node2D" unique_id=285811660]
+script = ExtResource("1_ketkj")
+display_name = "Kitchen"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway2" parent="Clickers" unique_id=881771067 instance=ExtResource("2_s5ags")]
+position = Vector2(165, 214)
+event_id = "day_kitchen_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway2" unique_id=1121390279]
+shape = SubResource("RectangleShape2D_stimi")

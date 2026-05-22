@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stimi"]
 size = Vector2(128, 128)
 
-[node name="RoomStudy" type="Node2D" unique_id=285811660]
+[node name="RoomDayStudy" type="Node2D" unique_id=285811660]
 script = ExtResource("1_stimi")
 display_name = "Study"
 

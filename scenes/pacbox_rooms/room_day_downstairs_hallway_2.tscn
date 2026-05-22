@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://hgbqrqp7koff"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_q8pog"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_8c7lk"]
+[ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_yg4ub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg4ub"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4qcp"]
+size = Vector2(128, 128)
+
+[node name="RoomDayDownstairsHallway2" type="Node2D" unique_id=285811660]
+script = ExtResource("1_q8pog")
+display_name = "Downstairs Hallway"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway1" parent="Clickers" unique_id=881771067 instance=ExtResource("2_8c7lk")]
+position = Vector2(154, 213)
+event_id = "day_downstairs_hallway_2_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway1" unique_id=164874906]
+shape = SubResource("RectangleShape2D_yg4ub")
+
+[node name="DiningRoom" parent="Clickers" unique_id=2123968157 instance=ExtResource("3_yg4ub")]
+position = Vector2(40, 56)
+event_id = "day_downstairs_hallway_2_to_dining"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/DiningRoom" unique_id=780857741]
+shape = SubResource("RectangleShape2D_yg4ub")
+
+[node name="Kitchen" parent="Clickers" unique_id=1294360810 instance=ExtResource("3_yg4ub")]
+position = Vector2(280, 61)
+event_id = "day_downstairs_hallway_2_to_kitchen"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Kitchen" unique_id=783771811]
+shape = SubResource("RectangleShape2D_yg4ub")
+
+[node name="Hallway3" parent="Clickers" unique_id=1062516812 instance=ExtResource("2_8c7lk")]
+position = Vector2(290, 129)
+event_id = "day_downstairs_hallway_2_to_hallway_3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway3" unique_id=1805141745]
+shape = SubResource("RectangleShape2D_o4qcp")

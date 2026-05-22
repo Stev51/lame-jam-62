@@ -10,29 +10,173 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_day_downstairs_hallway_1")
 			
-		"day_hallway_1_back":
+		"day_downstairs_hallway_1_back":
 			
-			PACBox.fade_to_room("room_day_living_room")
+			PACBox.fade_to_room("room_day_living_room_1")
 			
-		"day_hallway_1_to_stairs":
+		"day_downstairs_hallway_1_to_stairs":
 			
 			PACBox.fade_to_room("room_day_downstairs_stairs")
 			
-		"day_hallway_1_to_study":
+		"day_downstairs_hallway_1_to_study":
 			
 			PACBox.fade_to_room("room_day_study")
 			
-		"day_hallway_1_to_foyer":
+		"day_downstairs_hallway_1_to_foyer":
 			
 			PACBox.fade_to_room("room_day_foyer")
 			
-		"day_hallway_1_to_hallway_2":
+		"day_downstairs_hallway_1_to_hallway_2":
 			
 			PACBox.fade_to_room("room_day_downstairs_hallway_2")
 			
 		"day_study_back":
 			
 			PACBox.fade_to_room("room_day_downstairs_hallway_1")
+			
+		"day_living_room_1_back":
+			
+			PACBox.fade_to_room("room_day_living_room_2")
+			
+		"day_living_room_1_to_hallway_1":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_1")
+			
+		"day_living_room_2_back":
+			
+			PACBox.fade_to_room("room_day_living_room_1")
+			
+		"day_living_room_2_to_hallway_3":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_3")
+			
+		"day_downstairs_hallway_2_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_1")
+			
+		"day_downstairs_hallway_2_to_dining":
+			
+			PACBox.fade_to_room("room_day_dining")
+			
+		"day_downstairs_hallway_2_to_kitchen":
+			
+			PACBox.fade_to_room("room_day_kitchen")
+			
+		"day_downstairs_hallway_2_to_hallway_3":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_3")
+			
+		"day_dining_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_2")
+			
+		"day_kitchen_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_2")
+			
+		"day_downstairs_hallway_3_back":
+			
+			PACBox.fade_to_room("room_day_living_room_2")
+			
+		"day_downstairs_hallway_3_to_laundry":
+			
+			PACBox.fade_to_room("room_day_laundry")
+			
+		"day_downstairs_hallway_3_to_bathroom":
+			
+			PACBox.queue_dialog("day_downstairs_bathroom")
+			
+		"day_downstairs_hallway_3_to_hallway_2":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_2")
+			
+		"day_laundry_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_3")
+			
+		"day_downstairs_stairs_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_hallway_1")
+			
+		"day_downstairs_stairs_to_upstairs_stairs":
+			
+			PACBox.fade_to_room("room_day_upstairs_stairs")
+			
+		"day_upstairs_stairs_back":
+			
+			PACBox.fade_to_room("room_day_downstairs_stairs")
+			
+		"day_upstairs_stairs_to_hallway_1":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_1")
+			
+		"day_upstairs_hallway_1_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_stairs")
+			
+		"day_upstairs_hallway_1_to_hallway_2":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_2")
+			
+		"day_upstairs_hallway_1_to_bathroom":
+			
+			PACBox.queue_dialog("day_upstairs_bathroom")
+			
+		"day_upstairs_hallway_1_to_bedroom":
+			
+			PACBox.fade_to_room("room_day_bedroom_1")
+			
+		"day_upstairs_hallway_1_to_loft":
+			
+			PACBox.fade_to_room("room_day_loft")
+			
+		"day_upstairs_hallway_2_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_1")
+			
+		"day_upstairs_hallway_2_to_hallway_3":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_3")
+			
+		"day_upstairs_hallway_2_to_hallway_4":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_4")
+			
+		"day_upstairs_hallway_3_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_2")
+			
+		"day_upstairs_hallway_3_to_bedroom":
+			
+			PACBox.fade_to_room("room_day_bedroom_2")
+			
+		"day_upstairs_hallway_4_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_2")
+			
+		"day_upstairs_hallway_4_to_master_bedroom":
+			
+			PACBox.fade_to_room("room_day_master_bedroom")
+			
+		"day_bedroom_1_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_1")
+			
+		"day_bedroom_2_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_3")
+			
+		"day_master_bedroom_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_4")
+			
+		"day_master_bedroom_to_bathroom":
+			
+			PACBox.queue_dialog("day_master_bathroom")
+			
+		"day_loft_back":
+			
+			PACBox.fade_to_room("room_day_upstairs_hallway_1")
 			
 		"demo_event_go_room1":
 			

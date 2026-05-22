@@ -18,35 +18,35 @@ centered = false
 
 [node name="BackToLivingRoom" parent="Clickers" unique_id=881771067 instance=ExtResource("1_fie3p")]
 position = Vector2(154, 213)
-event_id = "day_hallway_1_back"
+event_id = "day_downstairs_hallway_1_back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToLivingRoom" unique_id=1723133805]
 shape = SubResource("RectangleShape2D_fie3p")
 
 [node name="Stairs" parent="Clickers" unique_id=1172884389 instance=ExtResource("1_fie3p")]
 position = Vector2(23, 114)
-event_id = "day_hallway_1_to_stairs"
+event_id = "day_downstairs_hallway_1_to_stairs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Stairs" unique_id=439729147]
 shape = SubResource("RectangleShape2D_fie3p")
 
 [node name="StudyDoor" parent="Clickers" unique_id=408616589 instance=ExtResource("2_mgti1")]
 position = Vector2(72, 53)
-event_id = "day_hallway_1_to_study"
+event_id = "day_downstairs_hallway_1_to_study"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/StudyDoor" unique_id=994987111]
 shape = SubResource("RectangleShape2D_fie3p")
 
 [node name="FoyerDoor" parent="Clickers" unique_id=1706169730 instance=ExtResource("2_mgti1")]
 position = Vector2(229, 52)
-event_id = "day_hallway_1_to_foyer"
+event_id = "day_downstairs_hallway_1_to_foyer"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/FoyerDoor" unique_id=29511040]
 shape = SubResource("RectangleShape2D_fie3p")
 
 [node name="Hallway2" parent="Clickers" unique_id=991487722 instance=ExtResource("1_fie3p")]
 position = Vector2(293, 115)
-event_id = "day_hallway_1_to_hallway_2"
+event_id = "day_downstairs_hallway_1_to_hallway_2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway2" unique_id=119587352]
 shape = SubResource("RectangleShape2D_fie3p")

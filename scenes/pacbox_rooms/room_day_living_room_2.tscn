@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://irdmj5k03lgd"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_v63wn"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_57ule"]
+[ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_s74rf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itb38"]
+size = Vector2(128, 128)
+
+[node name="RoomDayLivingRoom2" type="Node2D" unique_id=285811660]
+script = ExtResource("1_v63wn")
+display_name = "Living Room"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToLivingRoom" parent="Clickers" unique_id=881771067 instance=ExtResource("2_57ule")]
+position = Vector2(154, 213)
+event_id = "day_living_room_2_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToLivingRoom" unique_id=1385388245]
+shape = SubResource("RectangleShape2D_itb38")
+
+[node name="Hallway" parent="Clickers" unique_id=941411833 instance=ExtResource("3_s74rf")]
+position = Vector2(30, 63)
+event_id = "day_living_room_2_to_hallway_3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway" unique_id=1458656433]
+shape = SubResource("RectangleShape2D_itb38")

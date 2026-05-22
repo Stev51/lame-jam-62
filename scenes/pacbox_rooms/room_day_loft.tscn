@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bd1p1csc0ppwq"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_4j8lk"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_c482s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x07k2"]
+size = Vector2(128, 128)
+
+[node name="RoomDayLoft" type="Node2D" unique_id=285811660]
+script = ExtResource("1_4j8lk")
+display_name = "Living Room Loft"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("2_c482s")]
+position = Vector2(165, 214)
+event_id = "day_loft_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway" unique_id=1738758852]
+shape = SubResource("RectangleShape2D_x07k2")

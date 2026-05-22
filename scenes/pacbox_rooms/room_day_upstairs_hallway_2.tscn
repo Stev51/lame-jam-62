@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dah723flsoo3i"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_a0tqc"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_w2cc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1ke7"]
+size = Vector2(128, 128)
+
+[node name="RoomDayUpstairsHallway2" type="Node2D" unique_id=285811660]
+script = ExtResource("1_a0tqc")
+display_name = "Upstairs Hallway"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("2_w2cc8")]
+position = Vector2(161, 212)
+event_id = "day_upstairs_hallway_2_back"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/BackToHallway" unique_id=1765372270]
+shape = SubResource("RectangleShape2D_g1ke7")
+
+[node name="Hallway3" parent="Clickers" unique_id=347288616 instance=ExtResource("2_w2cc8")]
+position = Vector2(28, 106)
+event_id = "day_upstairs_hallway_2_to_hallway_3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway3" unique_id=623199580]
+shape = SubResource("RectangleShape2D_g1ke7")
+
+[node name="Hallway4" parent="Clickers" unique_id=1165189107 instance=ExtResource("2_w2cc8")]
+position = Vector2(290, 111)
+event_id = "day_upstairs_hallway_2_to_hallway_4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway4" unique_id=743528038]
+shape = SubResource("RectangleShape2D_g1ke7")
