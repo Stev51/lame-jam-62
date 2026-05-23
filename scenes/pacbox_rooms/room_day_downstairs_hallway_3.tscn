@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_bdbqv"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_ii068"]
+[ext_resource type="Texture2D" uid="uid://du21igcytit4u" path="res://assets/img/bg/day_downstairs_hallway_3.png" id="2_oxnl5"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_oxnl5"]
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="4_ii068"]
 
@@ -13,6 +14,7 @@ script = ExtResource("1_bdbqv")
 display_name = "Downstairs Hallway"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_oxnl5")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

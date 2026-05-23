@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3axht2ocs37g"]
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_nu8f8"]
+[ext_resource type="Texture2D" uid="uid://dly6c7n28kv1h" path="res://assets/img/bg/day_downstairs_stairs.png" id="2_sd6je"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_yv6xt"]
 
 [node name="RoomDayDownstairsStairs" type="Node2D" unique_id=285811660]
@@ -8,6 +9,7 @@ script = ExtResource("1_nu8f8")
 display_name = "Stairway"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_sd6je")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
@@ -17,6 +19,6 @@ position = Vector2(160, 220)
 event_id = "day_downstairs_stairs_back"
 
 [node name="Upstairs" parent="Clickers" unique_id=1492870006 instance=ExtResource("2_yv6xt")]
-position = Vector2(20, 120)
-rotation = 1.5707964
+position = Vector2(160, 20)
+rotation = 3.1415927
 event_id = "day_downstairs_stairs_to_upstairs_stairs"

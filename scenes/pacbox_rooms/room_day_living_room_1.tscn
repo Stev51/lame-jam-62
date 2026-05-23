@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ukxqwlqo0rq8"]
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_80s46"]
+[ext_resource type="Texture2D" uid="uid://ou0x6hjgklw2" path="res://assets/img/bg/day_living_room_1.png" id="2_cr8rt"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_ur3g8"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_itb38"]
 
@@ -12,6 +13,7 @@ script = ExtResource("1_80s46")
 display_name = "Living Room"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_cr8rt")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

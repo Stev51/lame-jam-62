@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_ketkj"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_s5ags"]
+[ext_resource type="Texture2D" uid="uid://dok2qp26dnbdj" path="res://assets/img/bg/day_kitchen.png" id="2_yau6p"]
 
 [node name="RoomDayKitchen" type="Node2D" unique_id=285811660]
 script = ExtResource("1_ketkj")
 display_name = "Kitchen"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_yau6p")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

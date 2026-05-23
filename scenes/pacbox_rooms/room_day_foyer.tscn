@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="1_p61jj"]
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_r8tnk"]
+[ext_resource type="Texture2D" uid="uid://dcsfvqvxaoxnn" path="res://assets/img/bg/day_foyer.png" id="2_iiroh"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_r8tnk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h5wg"]
@@ -12,6 +13,7 @@ script = ExtResource("1_r8tnk")
 display_name = "Foyer"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_iiroh")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

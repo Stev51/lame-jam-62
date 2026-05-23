@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://07rgfm8s8e24"]
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_up5c5"]
+[ext_resource type="Texture2D" uid="uid://df1rsquof3ltm" path="res://assets/img/bg/day_dining_room.png" id="2_qe7u5"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_sah5v"]
 
 [node name="RoomDayDining" type="Node2D" unique_id=285811660]
@@ -8,6 +9,7 @@ script = ExtResource("1_up5c5")
 display_name = "Dining Room"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_qe7u5")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

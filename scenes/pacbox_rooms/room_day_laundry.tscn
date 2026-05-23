@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_qd5tl"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_0v3hj"]
+[ext_resource type="Texture2D" uid="uid://blyqne2qfye0a" path="res://assets/img/bg/day_laundry.png" id="2_nvl3d"]
 
 [node name="RoomDayLaundry" type="Node2D" unique_id=285811660]
 script = ExtResource("1_qd5tl")
 display_name = "Laundry Room"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_nvl3d")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
