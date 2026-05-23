@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cjh17p1x1geor"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_voxp3"]
+[ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="2_jwoob"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_v2x2g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61wtw"]
+size = Vector2(128, 128)
+
+[node name="RoomPhotoBox" type="Node2D" unique_id=285811660]
+script = ExtResource("1_voxp3")
+display_name = "Living Room"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="InspectClicker" parent="Clickers" unique_id=881771067 instance=ExtResource("2_jwoob")]
+position = Vector2(158, 108)
+event_id = "get_photos"
+flag_id = "got_photos"
+invert_flag = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/InspectClicker" unique_id=2041653365]
+shape = SubResource("RectangleShape2D_61wtw")
+
+[node name="BackToLivingRoom" parent="Clickers" unique_id=1984546005 instance=ExtResource("3_v2x2g")]
+position = Vector2(160, 220)
+event_id = "photo_box_back"

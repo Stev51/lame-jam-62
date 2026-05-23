@@ -25,7 +25,7 @@ var hoverable = true
 
 func _ready() -> void:
 	
-	if not flag_id.is_empty():
+	if not flag_id.is_empty() and not Engine.is_editor_hint():
 		
 		var check_flag = PACBox.get_flag(flag_id)
 		if invert_flag:
