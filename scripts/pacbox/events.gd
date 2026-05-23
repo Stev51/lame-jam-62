@@ -1,7 +1,109 @@
 class_name Events extends Node
 
+func show_photo(id: int) -> void:
+	pass
+
+func hide_photo() -> void:
+	photo_placement_check()
+
+func photo_placement_check() -> void:
+	pass
+
+func incr_photo_count() -> void:
+	PACBox.set_flag("photos_placed", PACBox.get_flag("photos_placed") + 1)
+
 func call_event(id: String) -> void:
 	match id:
+		"photo1_place":
+			
+			incr_photo_count()
+			show_photo(1)
+			
+		"photo1_inspect":
+			
+			show_photo(1)
+			
+		"photo2_place":
+			
+			incr_photo_count()
+			show_photo(2)
+			
+		"photo2_inspect":
+			
+			show_photo(2)
+			
+		"photo3_place":
+			
+			incr_photo_count()
+			show_photo(3)
+			
+		"photo3_inspect":
+			
+			show_photo(3)
+			
+		"photo4_place":
+			
+			incr_photo_count()
+			show_photo(4)
+			
+		"photo4_inspect":
+			
+			show_photo(4)
+			
+		"photo5_place":
+			
+			incr_photo_count()
+			show_photo(5)
+			
+		"photo5_inspect":
+			
+			show_photo(5)
+			
+		"photo6_place":
+			
+			incr_photo_count()
+			show_photo(6)
+			
+		"photo6_inspect":
+			
+			show_photo(6)
+			
+		"photo7_place":
+			
+			incr_photo_count()
+			show_photo(7)
+			
+		"photo7_inspect":
+			
+			show_photo(7)
+			
+		"photo8_place":
+			
+			incr_photo_count()
+			show_photo(8)
+			
+		"photo8_inspect":
+			
+			show_photo(8)
+			
+		"photo9_place":
+			
+			incr_photo_count()
+			show_photo(9)
+			
+		"photo9_inspect":
+			
+			show_photo(9)
+			
+		"photo10_place":
+			
+			
+			show_photo(10)
+			
+		"photo10_inspect":
+			
+			show_photo(10)
+			
 		"day_front_door":
 			
 			PACBox.queue_dialog("day_front_door")
