@@ -22,7 +22,6 @@ enum DisplayMode {STILL_IMAGE, ANIMATED_IMAGE, HIDDEN_IMAGE}
 @onready var hover_sound_node = $HoverSound
 @onready var click_sound_node = $ClickSound
 
-
 var hoverable = true
 
 func _ready() -> void:
@@ -55,12 +54,19 @@ func update_display_mode(mode: DisplayMode) -> void:
 	
 	match mode:
 		DisplayMode.STILL_IMAGE:
+			
 			still_sprite_node.visible = true
 			anim_sprite_node.visible = false
+			
 		DisplayMode.ANIMATED_IMAGE:
+			
 			still_sprite_node.visible = false
 			anim_sprite_node.visible = true
+			
+			anim_sprite_node.play()
+			
 		_:
+			
 			still_sprite_node.visible = false
 			anim_sprite_node.visible = false
 

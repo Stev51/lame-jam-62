@@ -1,24 +1,11 @@
 [gd_scene format=3 uid="uid://bq71ba8s255ja"]
 
 [ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="1_v28a4"]
-[ext_resource type="Texture2D" uid="uid://o72ekcv6t5lp" path="res://assets/img/events/blank_photo_1_left.png" id="2_v28a4"]
-[ext_resource type="Texture2D" uid="uid://c68lww4ypk2mq" path="res://assets/img/events/blank_photo_2_left.png" id="3_rox7g"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_faxdr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_v28a4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_rox7g")
-}],
-"loop": true,
-"name": &"default",
-"speed": 2.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://dbswxoxug5vuf" path="res://resources/photo_left_frames.tres" id="2_g0dst"]
 
 [node name="PhotoLeftClicker" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("1_v28a4")]
+animated_image = ExtResource("2_g0dst")
+display_mode = 1
 hover_shape = NodePath("Polygon2D")
 
 [node name="StillImg" parent="." index="0" unique_id=1733266705]
@@ -26,8 +13,7 @@ visible = false
 
 [node name="AnimImg" parent="." index="1" unique_id=1535579500]
 visible = true
-sprite_frames = SubResource("SpriteFrames_faxdr")
-frame_progress = 0.9629926
+sprite_frames = ExtResource("2_g0dst")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="5" unique_id=2146794238]
 visible = false
