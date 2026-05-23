@@ -1,15 +1,15 @@
 [style name="dialogic_borderless_style"]
 You moved into a new house about a month ago.
-[wait_input]
+[wait time="0.5"]
 You're still getting used to the layout.\
 \
 It's bigger than you're used to.\
 \
 But it's nice.
-[wait_input]
+[wait time="0.5"]
 There are only a few boxes left to unpack now.
-[wait_input]
-Tonight you decided to hang up the pictures on the walls.
-[wait_input]
+[wait time="0.5"]
+Today you decided to hang up the pictures on the walls.
+[wait time="0.5"]
 It'll help the rooms feel less empty.
-[wait_input]
+[wait time="0.5"]

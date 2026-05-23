@@ -2,7 +2,6 @@ extends Node2D
 
 func _ready() -> void:
 	
-	'''
 	FadeScreen.fade_in_slow()
 	await FadeScreen.fade_in_finished
 	
@@ -11,7 +10,6 @@ func _ready() -> void:
 	
 	FadeScreen.fade_out_slow()
 	await FadeScreen.fade_out_finished
-	'''
 	
 	PACBox.start("room_day_living_room_2")
 	
