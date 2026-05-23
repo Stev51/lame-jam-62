@@ -64,7 +64,7 @@ color = Color(1, 1, 0, 0.19607843)
 polygon = PackedVector2Array(-29, -69, -30, 66, 29, 66, 29, -69)
 
 [node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=1014690923]
-position = Vector2(158, 71)
+position = Vector2(159, 71)
 scale = Vector2(0.15496308, 0.15496308)
 
 [node name="PhotoCenterClicker" parent="Clickers/PhotoGroup" unique_id=1782903376 instance=ExtResource("5_8556d")]

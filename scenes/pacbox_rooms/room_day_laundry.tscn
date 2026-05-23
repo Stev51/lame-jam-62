@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_qd5tl"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_0v3hj"]
 [ext_resource type="Texture2D" uid="uid://blyqne2qfye0a" path="res://assets/img/bg/day_laundry.png" id="2_nvl3d"]
+[ext_resource type="PackedScene" uid="uid://bt3cseq11cv1k" path="res://scenes/clickers/frame_left_clicker.tscn" id="4_nvl3d"]
+[ext_resource type="PackedScene" uid="uid://bq71ba8s255ja" path="res://scenes/clickers/photo_left_clicker.tscn" id="4_t1v5b"]
 
 [node name="RoomDayLaundry" type="Node2D" unique_id=285811660]
 script = ExtResource("1_qd5tl")
@@ -17,3 +19,16 @@ centered = false
 [node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("2_0v3hj")]
 position = Vector2(160, 220)
 event_id = "day_laundry_back"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=1325540143]
+position = Vector2(58, 75.99999)
+scale = Vector2(0.11736354, 0.11736354)
+
+[node name="PhotoLeftClicker" parent="Clickers/PhotoGroup" unique_id=2125311646 instance=ExtResource("4_t1v5b")]
+event_id = "photo2_place"
+flag_id = "photo2"
+invert_flag = true
+
+[node name="FrameLeftClicker" parent="Clickers/PhotoGroup" unique_id=832172424 instance=ExtResource("4_nvl3d")]
+event_id = "photo2_inspect"
+flag_id = "photo2"

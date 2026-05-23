@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="1_vdhoa"]
 [ext_resource type="Texture2D" uid="uid://7ho28dq36b8f" path="res://assets/img/events/photo_frame_right.png" id="3_ranwi"]
 
-[node name="FrameCenterClicker" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("1_vdhoa")]
+[node name="FrameRightClicker" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("1_vdhoa")]
 still_image = ExtResource("3_ranwi")
 hover_shape = NodePath("Polygon2D")
 

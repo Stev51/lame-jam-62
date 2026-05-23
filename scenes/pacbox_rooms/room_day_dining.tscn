@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_up5c5"]
 [ext_resource type="Texture2D" uid="uid://df1rsquof3ltm" path="res://assets/img/bg/day_dining_room.png" id="2_qe7u5"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_sah5v"]
+[ext_resource type="PackedScene" uid="uid://b7qcyf2wfrs35" path="res://scenes/clickers/photo_center_clicker.tscn" id="4_nypy6"]
+[ext_resource type="PackedScene" uid="uid://brnslstai1ik0" path="res://scenes/clickers/frame_center_clicker.tscn" id="5_twtky"]
 
 [node name="RoomDayDining" type="Node2D" unique_id=285811660]
 script = ExtResource("1_up5c5")
@@ -17,3 +19,16 @@ centered = false
 [node name="BackToHallway2" parent="Clickers" unique_id=881771067 instance=ExtResource("2_sah5v")]
 position = Vector2(160, 220)
 event_id = "day_dining_back"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=968137432]
+position = Vector2(159, 45)
+scale = Vector2(0.15496308, 0.15496308)
+
+[node name="PhotoCenterClicker" parent="Clickers/PhotoGroup" unique_id=1722155131 instance=ExtResource("4_nypy6")]
+event_id = "photo5_place"
+flag_id = "photo5"
+invert_flag = true
+
+[node name="FrameCenterClicker" parent="Clickers/PhotoGroup" unique_id=1955626275 instance=ExtResource("5_twtky")]
+event_id = "photo5_inspect"
+flag_id = "photo5"

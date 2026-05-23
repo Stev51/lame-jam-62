@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="1_dti4s"]
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_stimi"]
 [ext_resource type="Texture2D" uid="uid://b3486xmtlluyx" path="res://assets/img/bg/day_study.png" id="2_pt5cu"]
+[ext_resource type="PackedScene" uid="uid://bq71ba8s255ja" path="res://scenes/clickers/photo_left_clicker.tscn" id="4_amsfw"]
+[ext_resource type="PackedScene" uid="uid://bt3cseq11cv1k" path="res://scenes/clickers/frame_left_clicker.tscn" id="5_asjp6"]
 
 [node name="RoomDayStudy" type="Node2D" unique_id=285811660]
 script = ExtResource("1_stimi")
@@ -17,3 +19,16 @@ centered = false
 [node name="BackToHallway1" parent="Clickers" unique_id=881771067 instance=ExtResource("1_dti4s")]
 position = Vector2(160, 220)
 event_id = "day_study_back"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=2016497385]
+position = Vector2(62.000004, 55.000004)
+scale = Vector2(0.11736354, 0.11736354)
+
+[node name="PhotoLeftClicker" parent="Clickers/PhotoGroup" unique_id=883420952 instance=ExtResource("4_amsfw")]
+event_id = "photo3_place"
+flag_id = "photo3"
+invert_flag = true
+
+[node name="FrameLeftClicker" parent="Clickers/PhotoGroup" unique_id=677138766 instance=ExtResource("5_asjp6")]
+event_id = "photo3_inspect"
+flag_id = "photo3"
