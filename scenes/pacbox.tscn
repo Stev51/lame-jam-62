@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cwh73vxracxx5" path="res://scripts/pacbox/pacbox.gd" id="1_smwuo"]
 [ext_resource type="PackedScene" uid="uid://ceig62q1rlt51" path="res://scenes/gui.tscn" id="2_v2que"]
+[ext_resource type="AudioStream" uid="uid://cq63frxnfnc4s" path="res://assets/audio/door-08.mp3" id="3_smwuo"]
 
 [node name="PACBox" type="Node2D" unique_id=191530559]
 script = ExtResource("1_smwuo")
@@ -9,3 +10,7 @@ script = ExtResource("1_smwuo")
 [node name="Room" type="Node2D" parent="." unique_id=635444880]
 
 [node name="GUI" parent="." unique_id=1259786410 instance=ExtResource("2_v2que")]
+
+[node name="GlobalDoorSound" type="AudioStreamPlayer" parent="." unique_id=1958592306]
+stream = ExtResource("3_smwuo")
+volume_db = -10.0

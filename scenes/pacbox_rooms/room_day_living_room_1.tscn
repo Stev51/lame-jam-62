@@ -25,6 +25,7 @@ still_image = null
 hover_image = null
 hover_shape = NodePath("Polygon2D")
 event_id = "day_living_room_1_to_hallway_1"
+play_global_sound = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Hallway" unique_id=22460909]
 visible = false

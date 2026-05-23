@@ -5,6 +5,7 @@ extends Node2D
 
 @onready var room_node = $Room
 @onready var gui_node = $GUI
+@onready var door_sound_node = $GlobalDoorSound
 
 var current_room = null
 var hoverable = true
@@ -92,3 +93,6 @@ func queue_dialog(id: String) -> void:
 
 func is_dialog_active() -> bool:
 	return (Dialogic.current_timeline != null)
+
+func play_door_sound() -> void:
+	door_sound_node.play()

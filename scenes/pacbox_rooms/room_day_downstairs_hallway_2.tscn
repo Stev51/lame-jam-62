@@ -30,6 +30,7 @@ still_image = null
 hover_image = null
 hover_shape = NodePath("Polygon2D")
 event_id = "day_downstairs_hallway_2_to_dining"
+play_global_sound = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/DiningRoom" unique_id=793157016]
 visible = false
@@ -46,6 +47,7 @@ still_image = null
 hover_image = null
 hover_shape = NodePath("Polygon2D")
 event_id = "day_downstairs_hallway_2_to_kitchen"
+play_global_sound = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Kitchen" unique_id=1177696248]
 visible = false

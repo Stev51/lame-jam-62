@@ -13,6 +13,7 @@ enum DisplayMode {STILL_IMAGE, ANIMATED_IMAGE, HIDDEN_IMAGE}
 @export var event_id: String = "DEFAULT"
 @export var flag_id: String = ""
 @export var invert_flag: bool = false
+@export var play_global_sound: bool = false
 
 @onready var still_sprite_node = $StillImg
 @onready var anim_sprite_node = $AnimImg
@@ -20,6 +21,7 @@ enum DisplayMode {STILL_IMAGE, ANIMATED_IMAGE, HIDDEN_IMAGE}
 @onready var hover_shape_node = null
 @onready var hover_sound_node = $HoverSound
 @onready var click_sound_node = $ClickSound
+
 
 var hoverable = true
 
@@ -84,8 +86,13 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	# Left mouse button pressed
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:
 		if PACBox.hoverable:
+			
 			get_viewport().set_input_as_handled()
+			
+			if play_global_sound:
+				PACBox.play_door_sound()
 			click_sound_node.play()
+			
 			call_event()
 
 func _on_mouse_entered() -> void:

@@ -7,6 +7,7 @@
 [node name="DoorwayClicker" unique_id=881771067 instance=ExtResource("1_j4lse")]
 still_image = ExtResource("2_cdkoq")
 hover_image = ExtResource("3_6epcj")
+play_global_sound = true
 
 [node name="StillImg" parent="." index="0" unique_id=1733266705]
 texture = ExtResource("2_cdkoq")
