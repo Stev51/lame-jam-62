@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://du827lwfxfd8k"]
 
 [ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="1_cy3fa"]
-[ext_resource type="Texture2D" uid="uid://dud7ea0uebirh" path="res://assets/img/back_button.png" id="2_camgt"]
+[ext_resource type="Texture2D" uid="uid://dud7ea0uebirh" path="res://assets/img/events/back_button.png" id="2_camgt"]
 [ext_resource type="AudioStream" uid="uid://dnboblpkf0fqi" path="res://addons/dialogic/Example Assets/sound-effects/typing3.wav" id="4_mdtfi"]
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="5_ejdnx"]
 

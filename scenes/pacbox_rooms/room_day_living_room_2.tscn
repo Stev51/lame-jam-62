@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://chjmuljiibbmr" path="res://assets/img/bg/day_living_room_2.png" id="2_o7d4f"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_s74rf"]
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="4_57ule"]
-[ext_resource type="Texture2D" uid="uid://ba4r8u5ov0rt" path="res://assets/img/photos_event.png" id="6_1kvmu"]
+[ext_resource type="Texture2D" uid="uid://ba4r8u5ov0rt" path="res://assets/img/events/box_photos.png" id="6_1kvmu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itb38"]
 size = Vector2(69, 73)

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cau7cxqshoowf"]
+
+[ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="1_j5ktx"]
+[ext_resource type="Texture2D" uid="uid://cfahj6okl8vxy" path="res://assets/img/events/blank_photo_1_right.png" id="2_j5ktx"]
+[ext_resource type="Texture2D" uid="uid://dtpi0d3owuyoo" path="res://assets/img/events/blank_photo_2_right.png" id="3_8s48n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6fw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j5ktx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8s48n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="PhotoRightClicker" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("1_j5ktx")]
+hover_shape = NodePath("Polygon2D")
+
+[node name="StillImg" parent="." index="0" unique_id=1733266705]
+visible = false
+
+[node name="AnimImg" parent="." index="1" unique_id=1535579500]
+visible = true
+sprite_frames = SubResource("SpriteFrames_i6fw0")
+frame_progress = 0.64034766
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="5" unique_id=2146794238]
+visible = false
+polygon = PackedVector2Array(-128, -144, 112, -224, 112, 224, -128, 144)
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="6" unique_id=600445732]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-128, -144, 112, -224, 112, 224, -128, 144)
