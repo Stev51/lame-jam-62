@@ -3,5 +3,12 @@ class_name Flags extends Node
 var flags = {
 	"demo_flag": false,
 	"got_photos": false,
-	"photos_placed": 0
+	"photos_placed": 0,
+	"photo1": false,
+	"photo2": false,
+	"photo3": false,
+	"photo4": false,
+	"photo5": false,
+	"photo6": false,
+	"photo7": false
 }

@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_mgti1"]
 [ext_resource type="Texture2D" uid="uid://cxy1mw3e2atoa" path="res://assets/img/bg/day_downstairs_hallway_1.png" id="2_0bwqg"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="2_mgti1"]
+[ext_resource type="PackedScene" uid="uid://b7qcyf2wfrs35" path="res://scenes/clickers/photo_center_clicker.tscn" id="5_8556d"]
+[ext_resource type="PackedScene" uid="uid://brnslstai1ik0" path="res://scenes/clickers/frame_center_clicker.tscn" id="6_xalfe"]
 
 [node name="RoomDayDownstairsHallway1" type="Node2D" unique_id=285811660]
 script = ExtResource("1_mgti1")
@@ -60,3 +62,16 @@ polygon = PackedVector2Array(-30, -69, -30, 66, 29, 66, 29, -69)
 visible = false
 color = Color(1, 1, 0, 0.19607843)
 polygon = PackedVector2Array(-29, -69, -30, 66, 29, 66, 29, -69)
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=1014690923]
+position = Vector2(158, 71)
+scale = Vector2(0.15496308, 0.15496308)
+
+[node name="PhotoCenterClicker" parent="Clickers/PhotoGroup" unique_id=1782903376 instance=ExtResource("5_8556d")]
+event_id = "photo1_place"
+flag_id = "photo1"
+invert_flag = true
+
+[node name="FrameCenterClicker" parent="Clickers/PhotoGroup" unique_id=1643355833 instance=ExtResource("6_xalfe")]
+event_id = "photo1_inspect"
+flag_id = "photo1"

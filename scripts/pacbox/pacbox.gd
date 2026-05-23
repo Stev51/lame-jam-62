@@ -41,7 +41,7 @@ func get_flag(key: String):
 		return 0
 
 # Returns true if flag already existed
-func set_flag(key: String, val: bool = true) -> bool:
+func set_flag(key: String, val = true) -> bool:
 	
 	var ret_val = (key in flags.flags)
 	flags.flags[key] = val

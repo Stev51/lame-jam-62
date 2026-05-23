@@ -1,7 +1,7 @@
 class_name Events extends Node
 
 func show_photo(id: int) -> void:
-	pass
+	hide_photo() # !!!!! #
 
 func hide_photo() -> void:
 	photo_placement_check()
@@ -9,10 +9,11 @@ func hide_photo() -> void:
 var max_photo_count = 7
 func photo_placement_check() -> void:
 	if PACBox.get_flag("photos_placed") >= max_photo_count:
-		pass
+		PACBox.gui_node.disable_photo_place_goal_display()
 
 func incr_photo_count() -> void:
 	PACBox.set_flag("photos_placed", PACBox.get_flag("photos_placed") + 1)
+	PACBox.gui_node.update_photo_place_goal_display()
 
 func call_event(id: String) -> void:
 	match id:
@@ -20,6 +21,7 @@ func call_event(id: String) -> void:
 			
 			incr_photo_count()
 			show_photo(1)
+			PACBox.set_flag("photo1", true)
 			
 		"photo1_inspect":
 			
@@ -29,6 +31,7 @@ func call_event(id: String) -> void:
 			
 			incr_photo_count()
 			show_photo(2)
+			PACBox.set_flag("photo2", true)
 			
 		"photo2_inspect":
 			
@@ -38,6 +41,7 @@ func call_event(id: String) -> void:
 			
 			incr_photo_count()
 			show_photo(3)
+			PACBox.set_flag("photo3", true)
 			
 		"photo3_inspect":
 			
@@ -47,6 +51,7 @@ func call_event(id: String) -> void:
 			
 			incr_photo_count()
 			show_photo(4)
+			PACBox.set_flag("photo4", true)
 			
 		"photo4_inspect":
 			
@@ -56,6 +61,7 @@ func call_event(id: String) -> void:
 			
 			incr_photo_count()
 			show_photo(5)
+			PACBox.set_flag("photo5", true)
 			
 		"photo5_inspect":
 			
@@ -65,6 +71,7 @@ func call_event(id: String) -> void:
 			
 			incr_photo_count()
 			show_photo(6)
+			PACBox.set_flag("photo6", true)
 			
 		"photo6_inspect":
 			
@@ -74,6 +81,7 @@ func call_event(id: String) -> void:
 			
 			incr_photo_count()
 			show_photo(7)
+			PACBox.set_flag("photo7", true)
 			
 		"photo7_inspect":
 			

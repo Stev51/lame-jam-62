@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bokfsryx8nyi4"]
+
+[ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="1_vdhoa"]
+[ext_resource type="Texture2D" uid="uid://7ho28dq36b8f" path="res://assets/img/events/photo_frame_right.png" id="3_ranwi"]
+
+[node name="FrameCenterClicker" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("1_vdhoa")]
+still_image = ExtResource("3_ranwi")
+hover_shape = NodePath("Polygon2D")
+
+[node name="StillImg" parent="." index="0" unique_id=1733266705]
+texture = ExtResource("3_ranwi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="5" unique_id=478030343]
+visible = false
+polygon = PackedVector2Array(-128, -136, -128, 136, 120, 224, 120, -224)
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="6" unique_id=1919401581]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-125, -133, -124, 134, 115, 220, 115, -219)
