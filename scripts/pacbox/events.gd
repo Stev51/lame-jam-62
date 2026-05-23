@@ -178,6 +178,10 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_day_upstairs_hallway_3")
 			
+		"inspect_kid_boxes":
+			
+			PACBox.queue_dialog("inspect_kid_boxes")
+			
 		"day_master_bedroom_back":
 			
 			PACBox.fade_to_room("room_day_upstairs_hallway_4")

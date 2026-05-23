@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://c1mhv8c4awscm"]
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_h5prf"]
+[ext_resource type="Texture2D" uid="uid://cmtew38u1vomt" path="res://assets/img/bg/day_bedroom_2.png" id="2_c1tr4"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_n1b3d"]
+[ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="4_c1tr4"]
 
 [node name="RoomDayBedroom2" type="Node2D" unique_id=285811660]
 script = ExtResource("1_h5prf")
 display_name = "Bedroom"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_c1tr4")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
@@ -15,3 +18,19 @@ centered = false
 [node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("2_n1b3d")]
 position = Vector2(160, 220)
 event_id = "day_bedroom_2_back"
+
+[node name="Boxes" parent="Clickers" unique_id=909314426 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_c1tr4")]
+position = Vector2(88, 115)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "inspect_kid_boxes"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Boxes" unique_id=273976022]
+visible = false
+polygon = PackedVector2Array(-26, -58, -50, -46, -62, -17, -81, 11, -80, 38, -58, 45, -31, 45, -25, 43, -8, 43, 2, 45, 23, 45, 30, 41, 30, 38, 68, 38, 68, 7, 61, -18, 41, -36, 12, -36, 6, -58)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Boxes" unique_id=2094976656]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(6, -58, -26, -58, -26, -47, -50, -46, -50, -18, -62, -17, -62, 8, -80, 11, -80, 39, -58, 45, -31, 45, -25, 43, -25, 39, -8, 39, -8, 43, 0, 45, 23, 45, 30, 41, 30, 38, 68, 38, 68, 8, 67, 7, 61, 7, 61, -18, 41, -20, 41, -36, 11, -36, 11, -21, 6, -21)

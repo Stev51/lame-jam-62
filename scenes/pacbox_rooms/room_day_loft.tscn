@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_4j8lk"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_c482s"]
+[ext_resource type="Texture2D" uid="uid://65wqjhtel6eo" path="res://assets/img/bg/day_loft.png" id="2_ys1ak"]
 
 [node name="RoomDayLoft" type="Node2D" unique_id=285811660]
 script = ExtResource("1_4j8lk")
 display_name = "Living Room Loft"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_ys1ak")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

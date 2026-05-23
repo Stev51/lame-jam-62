@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dah723flsoo3i"]
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_a0tqc"]
+[ext_resource type="Texture2D" uid="uid://gg3drlek0rkl" path="res://assets/img/bg/day_upstairs_hallway_2.png" id="2_g1ke7"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_w2cc8"]
 
 [node name="RoomDayUpstairsHallway2" type="Node2D" unique_id=285811660]
@@ -8,6 +9,7 @@ script = ExtResource("1_a0tqc")
 display_name = "Upstairs Hallway"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_g1ke7")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bl3a01c1v4so6"]
 
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_uib5n"]
+[ext_resource type="Texture2D" uid="uid://c04u84rthgpkm" path="res://assets/img/bg/day_bedroom_1.png" id="2_ij7u7"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_y8a7v"]
 
 [node name="RoomDayBedroom1" type="Node2D" unique_id=285811660]
@@ -8,6 +9,7 @@ script = ExtResource("1_uib5n")
 display_name = "Bedroom"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_ij7u7")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
