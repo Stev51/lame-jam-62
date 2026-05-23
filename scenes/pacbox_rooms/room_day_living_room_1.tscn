@@ -5,9 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_ur3g8"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_itb38"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_itb38"]
-size = Vector2(128, 128)
-
 [node name="RoomDayLivingRoom1" type="Node2D" unique_id=285811660]
 script = ExtResource("1_80s46")
 display_name = "Living Room"
@@ -22,9 +19,18 @@ centered = false
 position = Vector2(160, 220)
 event_id = "day_living_room_1_back"
 
-[node name="Hallway" parent="Clickers" unique_id=941411833 instance=ExtResource("3_itb38")]
-position = Vector2(151, 44)
+[node name="Hallway" parent="Clickers" unique_id=941411833 node_paths=PackedStringArray("hover_shape") instance=ExtResource("3_itb38")]
+position = Vector2(196, 143)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
 event_id = "day_living_room_1_to_hallway_1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Hallway" unique_id=1458656433]
-shape = SubResource("RectangleShape2D_itb38")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Hallway" unique_id=22460909]
+visible = false
+polygon = PackedVector2Array(-13, -33, -13, 31, 15, 31, 15, -33)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Hallway" unique_id=561463188]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-13, -33, -13, 31, 14, 31, 14, -33)

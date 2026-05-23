@@ -5,9 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cxy1mw3e2atoa" path="res://assets/img/bg/day_downstairs_hallway_1.png" id="2_0bwqg"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="2_mgti1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fie3p"]
-size = Vector2(128, 128)
-
 [node name="RoomDayDownstairsHallway1" type="Node2D" unique_id=285811660]
 script = ExtResource("1_mgti1")
 display_name = "Downstairs Hallway"
@@ -27,21 +24,39 @@ position = Vector2(20, 120)
 rotation = 1.5707964
 event_id = "day_downstairs_hallway_1_to_stairs"
 
-[node name="StudyDoor" parent="Clickers" unique_id=408616589 instance=ExtResource("2_mgti1")]
-position = Vector2(72, 53)
-event_id = "day_downstairs_hallway_1_to_study"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/StudyDoor" unique_id=994987111]
-shape = SubResource("RectangleShape2D_fie3p")
-
-[node name="FoyerDoor" parent="Clickers" unique_id=1706169730 instance=ExtResource("2_mgti1")]
-position = Vector2(229, 52)
-event_id = "day_downstairs_hallway_1_to_foyer"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/FoyerDoor" unique_id=29511040]
-shape = SubResource("RectangleShape2D_fie3p")
-
 [node name="Hallway2" parent="Clickers" unique_id=991487722 instance=ExtResource("1_fie3p")]
 position = Vector2(300, 120)
 rotation = -1.5707964
 event_id = "day_downstairs_hallway_1_to_hallway_2"
+
+[node name="StudyDoor" parent="Clickers" unique_id=408616589 node_paths=PackedStringArray("hover_shape") instance=ExtResource("2_mgti1")]
+position = Vector2(75, 106)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "day_downstairs_hallway_1_to_study"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/StudyDoor" unique_id=1114798223]
+visible = false
+polygon = PackedVector2Array(-29, -70, -29, 65, 30, 65, 30, -70)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/StudyDoor" unique_id=979775181]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-28, -70, -29, 65, 30, 65, 30, -70)
+
+[node name="FoyerDoor" parent="Clickers" unique_id=1706169730 node_paths=PackedStringArray("hover_shape") instance=ExtResource("2_mgti1")]
+position = Vector2(241, 105)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "day_downstairs_hallway_1_to_foyer"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/FoyerDoor" unique_id=1907002750]
+visible = false
+polygon = PackedVector2Array(-30, -69, -30, 66, 29, 66, 29, -69)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/FoyerDoor" unique_id=582039559]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-29, -69, -30, 66, 29, 66, 29, -69)

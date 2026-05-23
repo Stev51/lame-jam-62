@@ -5,9 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://b6ckvun1d0uom" path="res://assets/img/bg/day_downstairs_hallway_2.png" id="2_o4qcp"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_yg4ub"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg4ub"]
-size = Vector2(128, 128)
-
 [node name="RoomDayDownstairsHallway2" type="Node2D" unique_id=285811660]
 script = ExtResource("1_q8pog")
 display_name = "Downstairs Hallway"
@@ -22,21 +19,39 @@ centered = false
 position = Vector2(160, 220)
 event_id = "day_downstairs_hallway_2_back"
 
-[node name="DiningRoom" parent="Clickers" unique_id=2123968157 instance=ExtResource("3_yg4ub")]
-position = Vector2(40, 56)
-event_id = "day_downstairs_hallway_2_to_dining"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/DiningRoom" unique_id=780857741]
-shape = SubResource("RectangleShape2D_yg4ub")
-
-[node name="Kitchen" parent="Clickers" unique_id=1294360810 instance=ExtResource("3_yg4ub")]
-position = Vector2(280, 61)
-event_id = "day_downstairs_hallway_2_to_kitchen"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Kitchen" unique_id=783771811]
-shape = SubResource("RectangleShape2D_yg4ub")
-
 [node name="Hallway3" parent="Clickers" unique_id=1062516812 instance=ExtResource("2_8c7lk")]
 position = Vector2(300, 120)
 rotation = -1.5707964
 event_id = "day_downstairs_hallway_2_to_hallway_3"
+
+[node name="DiningRoom" parent="Clickers" unique_id=2123968157 node_paths=PackedStringArray("hover_shape") instance=ExtResource("3_yg4ub")]
+position = Vector2(40, 56)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "day_downstairs_hallway_2_to_dining"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/DiningRoom" unique_id=793157016]
+visible = false
+polygon = PackedVector2Array(66, -48, 57, -53, 57, 36, 66, 23)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/DiningRoom" unique_id=1989174982]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(66, -47, 57, -52, 57, 35, 66, 23)
+
+[node name="Kitchen" parent="Clickers" unique_id=1294360810 node_paths=PackedStringArray("hover_shape") instance=ExtResource("3_yg4ub")]
+position = Vector2(280, 61)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "day_downstairs_hallway_2_to_kitchen"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Kitchen" unique_id=1177696248]
+visible = false
+polygon = PackedVector2Array(-66, -53, -57, -58, -57, 31, -66, 17)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Kitchen" unique_id=1714250853]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-57, -57, -66, -52, -66, 16, -57, 30)

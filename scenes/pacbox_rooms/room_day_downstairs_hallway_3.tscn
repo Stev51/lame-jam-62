@@ -6,9 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_oxnl5"]
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="4_ii068"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg4ub"]
-size = Vector2(128, 128)
-
 [node name="RoomDayDownstairsHallway3" type="Node2D" unique_id=285811660]
 script = ExtResource("1_bdbqv")
 display_name = "Downstairs Hallway"
@@ -23,21 +20,39 @@ centered = false
 position = Vector2(160, 220)
 event_id = "day_downstairs_hallway_3_back"
 
-[node name="LaundryRoom" parent="Clickers" unique_id=2123968157 instance=ExtResource("3_oxnl5")]
-position = Vector2(160, 59)
-event_id = "day_downstairs_hallway_3_to_laundry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/LaundryRoom" unique_id=780857741]
-shape = SubResource("RectangleShape2D_yg4ub")
-
 [node name="Hallway" parent="Clickers" unique_id=349862607 instance=ExtResource("2_ii068")]
 position = Vector2(20, 120)
 rotation = 1.5707964
 event_id = "day_downstairs_hallway_3_to_hallway_2"
 
-[node name="Bathroom" parent="Clickers" unique_id=148199371 instance=ExtResource("4_ii068")]
-position = Vector2(272, 60)
+[node name="LaundryRoom" parent="Clickers" unique_id=2123968157 node_paths=PackedStringArray("hover_shape") instance=ExtResource("3_oxnl5")]
+position = Vector2(89, 103)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "day_downstairs_hallway_3_to_laundry"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/LaundryRoom" unique_id=1407473176]
+visible = false
+polygon = PackedVector2Array(-29, -67, -29, 68, 30, 68, 30, -67)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/LaundryRoom" unique_id=855517834]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-28, -67, -28, 68, 30, 68, 30, -67)
+
+[node name="Bathroom" parent="Clickers" unique_id=148199371 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_ii068")]
+position = Vector2(255, 102)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
 event_id = "day_downstairs_hallway_3_to_bathroom"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Bathroom" unique_id=1032477958]
-shape = SubResource("RectangleShape2D_yg4ub")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Bathroom" unique_id=1124839298]
+visible = false
+polygon = PackedVector2Array(-30, -66, -30, 69, 29, 69, 29, -66)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Bathroom" unique_id=2102278016]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-29, -66, -29, 69, 29, 69, 29, -66)
