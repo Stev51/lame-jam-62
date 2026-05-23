@@ -6,7 +6,7 @@ extends Control
 @onready var photo_check_goal_node = $PhotoCheckGoalDisplay
 
 var photo_place_text = "Photos Placed: "
-var photo_place_max = 10
+var photo_place_max = 7
 
 func update_room_text(text: String) -> void:
 	room_text_node.text = text

@@ -6,8 +6,10 @@ func show_photo(id: int) -> void:
 func hide_photo() -> void:
 	photo_placement_check()
 
+var max_photo_count = 7
 func photo_placement_check() -> void:
-	pass
+	if PACBox.get_flag("photos_placed") >= max_photo_count:
+		pass
 
 func incr_photo_count() -> void:
 	PACBox.set_flag("photos_placed", PACBox.get_flag("photos_placed") + 1)
@@ -76,33 +78,6 @@ func call_event(id: String) -> void:
 		"photo7_inspect":
 			
 			show_photo(7)
-			
-		"photo8_place":
-			
-			incr_photo_count()
-			show_photo(8)
-			
-		"photo8_inspect":
-			
-			show_photo(8)
-			
-		"photo9_place":
-			
-			incr_photo_count()
-			show_photo(9)
-			
-		"photo9_inspect":
-			
-			show_photo(9)
-			
-		"photo10_place":
-			
-			
-			show_photo(10)
-			
-		"photo10_inspect":
-			
-			show_photo(10)
 			
 		"day_front_door":
 			
