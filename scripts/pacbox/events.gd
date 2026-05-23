@@ -1,15 +1,24 @@
 class_name Events extends Node
 
 func show_photo(id: int) -> void:
-	hide_photo() # !!!!! #
+	PhotoShower.show_photo(id)
+	PACBox.gui_node.hide_room_text_display()
+	PACBox.gui_node.hide_photo_place_goal_display()
 
 func hide_photo() -> void:
-	photo_placement_check()
+	
+	PhotoShower.hide_photo()
+	PACBox.gui_node.unhide_room_text_display()
+	PACBox.gui_node.unhide_photo_place_goal_display()
+	
+	if not PACBox.get_flag("ready_to_read_article"):
+		photo_placement_check()
 
 var max_photo_count = 7
 func photo_placement_check() -> void:
 	if PACBox.get_flag("photos_placed") >= max_photo_count:
 		PACBox.gui_node.disable_photo_place_goal_display()
+		call_event("placed_all_photos")
 
 func incr_photo_count() -> void:
 	PACBox.set_flag("photos_placed", PACBox.get_flag("photos_placed") + 1)
@@ -17,6 +26,10 @@ func incr_photo_count() -> void:
 
 func call_event(id: String) -> void:
 	match id:
+		"photo_shower_click":
+			
+			hide_photo()
+			
 		"photo1_place":
 			
 			incr_photo_count()
@@ -86,6 +99,11 @@ func call_event(id: String) -> void:
 		"photo7_inspect":
 			
 			show_photo(7)
+			
+		"placed_all_photos":
+			
+			PACBox.queue_dialog("placed_all_photos")
+			PACBox.set_flag("ready_to_read_article", true)
 			
 		"day_front_door":
 			

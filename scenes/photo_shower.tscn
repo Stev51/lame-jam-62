@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dt8f7nj4u1oci"]
+
+[ext_resource type="Script" uid="uid://6yb3448fotug" path="res://scripts/photo_shower.gd" id="1_dlhex"]
+[ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="2_yn21p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlhex"]
+size = Vector2(320, 240)
+
+[node name="PhotoShower" type="Control" unique_id=149294692]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -320.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dlhex")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1168618022]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 240.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Photo" type="Sprite2D" parent="." unique_id=1370115078]
+position = Vector2(160, 120)
+scale = Vector2(0.5, 0.5)
+
+[node name="Clicker" parent="." unique_id=881771067 instance=ExtResource("2_yn21p")]
+z_index = 1
+position = Vector2(160, 120)
+event_id = "photo_shower_click"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clicker" unique_id=1799031699]
+shape = SubResource("RectangleShape2D_dlhex")

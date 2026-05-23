@@ -1,8 +1,11 @@
 class_name Flags extends Node
 
 var flags = {
+	
 	"demo_flag": false,
+	
 	"got_photos": false,
+	
 	"photos_placed": 0,
 	"photo1": false,
 	"photo2": false,
@@ -10,5 +13,9 @@ var flags = {
 	"photo4": false,
 	"photo5": false,
 	"photo6": false,
-	"photo7": false
+	"photo7": false,
+	
+	"ready_to_read_article": false,
+	"done_reading_article": false
+	
 }

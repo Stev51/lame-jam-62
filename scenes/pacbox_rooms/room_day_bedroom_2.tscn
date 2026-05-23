@@ -7,7 +7,7 @@
 
 [node name="RoomDayBedroom2" type="Node2D" unique_id=285811660]
 script = ExtResource("1_h5prf")
-display_name = "Bedroom"
+display_name = "Sean's Bedroom"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
 texture = ExtResource("2_c1tr4")

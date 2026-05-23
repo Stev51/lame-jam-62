@@ -20,6 +20,7 @@ config/icon="res://assets/img/icon.svg"
 PACBox="*uid://c186q2k21dmw6"
 FadeScreen="*uid://bhd7r43wes5iy"
 Dialogic="*uid://ds2q0uclmolvu"
+PhotoShower="*uid://dt8f7nj4u1oci"
 
 [dialogic]
 
@@ -34,7 +35,8 @@ directories/dtl_directory={
 "demo_timeline_3": "res://assets/text/demo_timeline_3.dtl",
 "get_photos": "res://assets/text/get_photos.dtl",
 "inspect_kid_boxes": "res://assets/text/inspect_kid_boxes.dtl",
-"intro": "res://assets/text/intro.dtl"
+"intro": "res://assets/text/intro.dtl",
+"placed_all_photos": "res://placed_all_photos.dtl"
 }
 layout/style_directory={
 "": "res://resources/dialogic_default_style.tres",
@@ -116,5 +118,3 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-2d/snap/snap_2d_transforms_to_pixel=true
-2d/snap/snap_2d_vertices_to_pixel=true
