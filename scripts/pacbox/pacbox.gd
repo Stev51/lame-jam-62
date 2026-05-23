@@ -33,12 +33,12 @@ func disable() -> void:
 func call_event(id: String) -> void:
 	events.call_event(id)
 
-func get_flag(key: String) -> bool:
+func get_flag(key: String):
 	if key in flags.flags:
 		return flags.flags[key]
 	else:
-		print("ERROR: Accessed invalid story flag \"" + key + "\". Returning FALSE as a default value.")
-		return false
+		print("ERROR: Accessed invalid story flag \"" + key + "\". Returning 0 as a default value.")
+		return 0
 
 # Returns true if flag already existed
 func set_flag(key: String, val: bool = true) -> bool:

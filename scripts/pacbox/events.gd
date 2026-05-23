@@ -58,6 +58,9 @@ func call_event(id: String) -> void:
 			
 			PACBox.set_flag("got_photos")
 			
+			PACBox.gui_node.update_photo_place_goal_display()
+			PACBox.gui_node.enable_photo_place_goal_display()
+			
 		"photo_box_back":
 			
 			PACBox.fade_to_room("room_day_living_room_2")
