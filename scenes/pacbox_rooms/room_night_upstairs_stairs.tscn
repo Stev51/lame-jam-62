@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cchy3r2ylgifm"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_vpv00"]
+[ext_resource type="Texture2D" uid="uid://cyqy4l5tt6ngw" path="res://assets/img/bg/night_upstairs_stairs.png" id="2_2jjqd"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_g12u8"]
+[ext_resource type="PackedScene" uid="uid://brnslstai1ik0" path="res://scenes/clickers/frame_center_clicker.tscn" id="5_bvbl5"]
+
+[node name="RoomDayUpstairsStairs" type="Node2D" unique_id=285811660]
+script = ExtResource("1_vpv00")
+display_name = "Stairway"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_2jjqd")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Down" parent="Clickers" unique_id=881771067 instance=ExtResource("3_g12u8")]
+position = Vector2(160, 220)
+event_id = "night_upstairs_stairs_back"
+
+[node name="Up" parent="Clickers" unique_id=1492870006 instance=ExtResource("3_g12u8")]
+position = Vector2(20, 120)
+rotation = 1.5707964
+event_id = "night_upstairs_stairs_to_hallway_1"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=1643746485]
+position = Vector2(266.00003, 18.000002)
+scale = Vector2(0.24501078, 0.24501078)
+
+[node name="FrameCenterClicker" parent="Clickers/PhotoGroup" unique_id=946879909 instance=ExtResource("5_bvbl5")]
+event_id = "photo13_inspect"

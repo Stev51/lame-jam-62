@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bt2ggxulblj3b"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_m28jb"]
+[ext_resource type="Texture2D" uid="uid://dsfnphjjb7wq0" path="res://assets/img/bg/night_bedroom_1.png" id="2_m28jb"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_pqdeq"]
+
+[node name="RoomDayBedroom1" type="Node2D" unique_id=285811660]
+script = ExtResource("1_m28jb")
+display_name = "Empty Bedroom"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_m28jb")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("3_pqdeq")]
+position = Vector2(160, 220)
+event_id = "night_bedroom_1_back"

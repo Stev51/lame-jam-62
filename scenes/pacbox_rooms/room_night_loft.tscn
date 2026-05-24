@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d6jtjcitbhcd"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_goe1c"]
+[ext_resource type="Texture2D" uid="uid://cnghabbgxybcm" path="res://assets/img/bg/night_loft.png" id="2_goe1c"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_3sq3l"]
+
+[node name="RoomDayLoft" type="Node2D" unique_id=285811660]
+script = ExtResource("1_goe1c")
+display_name = "Living Room Loft"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_goe1c")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("3_3sq3l")]
+position = Vector2(160, 220)
+event_id = "night_loft_back"
