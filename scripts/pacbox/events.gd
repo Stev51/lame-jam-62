@@ -1,15 +1,20 @@
 class_name Events extends Node
 
 func show_photo(id: int) -> void:
+	
 	PhotoShower.show_photo(id)
+	
 	PACBox.gui_node.hide_room_text_display()
 	PACBox.gui_node.hide_photo_place_goal_display()
+	PACBox.gui_node.hide_quest_goal_display()
 
 func hide_photo() -> void:
 	
 	PhotoShower.hide_photo()
+	
 	PACBox.gui_node.unhide_room_text_display()
 	PACBox.gui_node.unhide_photo_place_goal_display()
+	PACBox.gui_node.unhide_quest_goal_display()
 	
 	if not PACBox.get_flag("ready_to_read_article"):
 		photo_placement_check()
@@ -103,7 +108,55 @@ func call_event(id: String) -> void:
 		"placed_all_photos":
 			
 			PACBox.queue_dialog("placed_all_photos")
+			await Dialogic.timeline_ended
+			
 			PACBox.set_flag("ready_to_read_article", true)
+			
+			PACBox.gui_node.update_quest_text("Go to the Office")
+			PACBox.gui_node.enable_quest_goal_display()
+			
+		"use_laptop":
+			
+			PACBox.gui_node.hide_room_text_display()
+			PACBox.gui_node.hide_photo_place_goal_display()
+			PACBox.gui_node.hide_quest_goal_display()
+			
+			PACBox.fade_to_room("room_laptop_0")
+			
+		"laptop_0_to_laptop_1":
+			
+			PACBox.fade_to_room("room_laptop_1")
+			
+		"laptop_1_to_laptop_2":
+			
+			PACBox.switch_room("room_laptop_2")
+			
+		"laptop_2_to_laptop_1":
+			
+			PACBox.switch_room("room_laptop_1")
+			
+		"laptop_2_to_laptop_3":
+			
+			PACBox.switch_room("room_laptop_3")
+			
+		"laptop_3_to_laptop_2":
+			
+			PACBox.switch_room("room_laptop_2")
+			
+		"laptop_3_to_laptop_4":
+			
+			PACBox.switch_room("room_laptop_4")
+			
+		"done_using_laptop":
+			
+			PACBox.set_flag("ready_to_read_article", false)
+			PACBox.set_flag("done_reading_article", true)
+			
+			PACBox.fade_to_room("room_day_study")
+			
+			PACBox.gui_node.unhide_room_text_display()
+			PACBox.gui_node.unhide_photo_place_goal_display()
+			PACBox.gui_node.unhide_quest_goal_display()
 			
 		"day_front_door":
 			

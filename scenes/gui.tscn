@@ -55,8 +55,23 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PhotoCheckGoalDisplay" type="Control" parent="." unique_id=1677500582]
+[node name="QuestGoalDisplay" type="Control" parent="." unique_id=1677500582]
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="QuestGoalDisplay" unique_id=1422316659]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="QuestGoalDisplay" unique_id=930343862]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 16.0
+theme_override_font_sizes/normal_font_size = 10
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

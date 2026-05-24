@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://co7umijijxtf6"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_jfw4y"]
+[ext_resource type="Texture2D" uid="uid://dn63krnc3cd63" path="res://assets/img/laptop3.png" id="2_jfw4y"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_wnomi"]
+[ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="4_i1cbx"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="5_wnomi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnomi"]
+size = Vector2(114, 17)
+
+[node name="RoomLaptop3" type="Node2D" unique_id=285811660]
+script = ExtResource("1_jfw4y")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_jfw4y")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=1951054739 instance=ExtResource("3_wnomi")]
+position = Vector2(160, 20)
+rotation = 3.1415927
+event_id = "laptop_3_to_laptop_2"
+
+[node name="Link" parent="Clickers" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_i1cbx")]
+position = Vector2(200, 69)
+hover_shape = NodePath("Polygon2D")
+click_sound = ExtResource("5_wnomi")
+event_id = "laptop_3_to_laptop_4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Link" unique_id=1670626075]
+visible = false
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_wnomi")
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Link" unique_id=97106600]
+visible = false
+color = Color(0, 0, 1, 0.19607843)
+polygon = PackedVector2Array(-57, -5, -57, 5, 53, 5, 53, -5)

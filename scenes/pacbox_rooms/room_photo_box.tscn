@@ -4,9 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="2_jwoob"]
 [ext_resource type="Texture2D" uid="uid://cqjtutn8kpufl" path="res://assets/img/bg/photo_box.png" id="2_v2x2g"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_v2x2g"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_61wtw"]
-size = Vector2(128, 128)
+[ext_resource type="Texture2D" uid="uid://bcaf4gbjmtscb" path="res://assets/img/events/box_photos_big.png" id="5_61wtw"]
 
 [node name="RoomPhotoBox" type="Node2D" unique_id=285811660]
 script = ExtResource("1_voxp3")
@@ -18,15 +16,23 @@ centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
 
-[node name="InspectClicker" parent="Clickers" unique_id=881771067 instance=ExtResource("2_jwoob")]
-position = Vector2(158, 108)
+[node name="BackToLivingRoom" parent="Clickers" unique_id=1984546005 instance=ExtResource("3_v2x2g")]
+position = Vector2(160, 220)
+event_id = "photo_box_back"
+
+[node name="Photos" parent="Clickers" unique_id=881771067 instance=ExtResource("2_jwoob")]
+position = Vector2(165, 136)
+still_image = ExtResource("5_61wtw")
+hover_image = null
 event_id = "get_photos"
 flag_id = "got_photos"
 invert_flag = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/InspectClicker" unique_id=2041653365]
-shape = SubResource("RectangleShape2D_61wtw")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Photos" unique_id=1138470619]
+visible = false
+polygon = PackedVector2Array(100, -23, 75, -39, 49, -51, 20, -57, -14, -58, -43, -52, -92, -6, -90, 22, -21, 65, 96, -12)
 
-[node name="BackToLivingRoom" parent="Clickers" unique_id=1984546005 instance=ExtResource("3_v2x2g")]
-position = Vector2(160, 220)
-event_id = "photo_box_back"
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Photos" unique_id=1445113878]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-43, -53, -38, -43, -14, -59, -9, -43, 20, -57, 22, -45, 49, -52, 49, -39, 76, -39, 72, -26, 98, -23, 95, -14, 5, 12, -19, 63, -21, 64, -23, 63, -61, 17, -92, -5)

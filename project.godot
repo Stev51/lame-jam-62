@@ -33,6 +33,7 @@ directories/dtl_directory={
 "demo_timeline_1": "res://assets/text/demo_timeline_1.dtl",
 "demo_timeline_2": "res://assets/text/demo_timeline_2.dtl",
 "demo_timeline_3": "res://assets/text/demo_timeline_3.dtl",
+"done_reading_article": "res://done_reading_article.dtl",
 "get_photos": "res://assets/text/get_photos.dtl",
 "inspect_kid_boxes": "res://assets/text/inspect_kid_boxes.dtl",
 "intro": "res://assets/text/intro.dtl",

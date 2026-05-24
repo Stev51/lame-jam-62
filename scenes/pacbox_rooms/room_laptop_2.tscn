@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dhkcgt5gygqy8"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_6rxq6"]
+[ext_resource type="Texture2D" uid="uid://caf0vfkxb148f" path="res://assets/img/laptop2.png" id="2_6rxq6"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_cs4e5"]
+
+[node name="RoomLaptop2" type="Node2D" unique_id=285811660]
+script = ExtResource("1_6rxq6")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_6rxq6")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Next" parent="Clickers" unique_id=881771067 instance=ExtResource("3_cs4e5")]
+position = Vector2(160, 220)
+event_id = "laptop_2_to_laptop_3"
+
+[node name="Back" parent="Clickers" unique_id=1951054739 instance=ExtResource("3_cs4e5")]
+position = Vector2(160, 20)
+rotation = 3.1415927
+event_id = "laptop_2_to_laptop_1"

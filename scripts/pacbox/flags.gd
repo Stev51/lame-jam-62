@@ -6,7 +6,8 @@ var flags = {
 	
 	"got_photos": false,
 	
-	"photos_placed": 0,
+	"photos_placed": 7,
+	#"photos_placed": 0,
 	"photo1": false,
 	"photo2": false,
 	"photo3": false,
@@ -16,6 +17,7 @@ var flags = {
 	"photo7": false,
 	
 	"ready_to_read_article": false,
-	"done_reading_article": false
+	"done_reading_article": false,
+	"heard_done_dialog": false
 	
 }

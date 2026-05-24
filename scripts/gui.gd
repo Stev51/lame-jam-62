@@ -4,10 +4,12 @@ extends Control
 @onready var room_text_node = $RoomDisplay/RichTextLabel
 @onready var photo_place_goal_node = $PhotoPlaceGoalDisplay
 @onready var photo_place_goal_text_node = $PhotoPlaceGoalDisplay/RichTextLabel
-@onready var photo_check_goal_node = $PhotoCheckGoalDisplay
+@onready var quest_goal_node = $QuestGoalDisplay
+@onready var quest_goal_text_node = $QuestGoalDisplay/RichTextLabel
 
 var location_showing = true
 var photo_placing = false
+var quest_showing = false
 
 var photo_place_text = "Photos Placed: "
 var photo_place_max = 7
@@ -49,8 +51,20 @@ func update_photo_place_goal_display() -> void:
 	var num = PACBox.get_flag("photos_placed")
 	photo_place_goal_text_node.text = photo_place_text + str(num) + "/" + str(photo_place_max)
 
-func enable_photo_check_goal_display() -> void:
-	photo_check_goal_node.visible = true
+func enable_quest_goal_display() -> void:
+	quest_showing = true
+	quest_goal_node.visible = true
 
-func disable_photo_check_goal_display() -> void:
-	photo_check_goal_node.visible = false
+func disable_quest_goal_display() -> void:
+	quest_showing = false
+	quest_goal_node.visible = false
+
+func hide_quest_goal_display() -> void:
+	quest_goal_node.visible = false
+
+func unhide_quest_goal_display() -> void:
+	if quest_showing:
+		quest_goal_node.visible = true
+
+func update_quest_text(text: String) -> void:
+	quest_goal_text_node.text = text

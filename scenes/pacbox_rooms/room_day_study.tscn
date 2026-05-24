@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://ehamk36ssada"]
 
+[ext_resource type="Script" uid="uid://8ref30vsrtto" path="res://scripts/room_day_study.gd" id="1_d87am"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="1_dti4s"]
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_stimi"]
 [ext_resource type="Texture2D" uid="uid://b3486xmtlluyx" path="res://assets/img/bg/day_study.png" id="2_pt5cu"]
 [ext_resource type="PackedScene" uid="uid://bq71ba8s255ja" path="res://scenes/clickers/photo_left_clicker.tscn" id="4_amsfw"]
+[ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="4_d87am"]
 [ext_resource type="PackedScene" uid="uid://bt3cseq11cv1k" path="res://scenes/clickers/frame_left_clicker.tscn" id="5_asjp6"]
+[ext_resource type="Texture2D" uid="uid://bduvjuayxhhdy" path="res://assets/img/events/laptop.png" id="5_tgrql"]
 
 [node name="RoomDayStudy" type="Node2D" unique_id=285811660]
-script = ExtResource("1_stimi")
+script = ExtResource("1_d87am")
 display_name = "Office"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
@@ -19,6 +21,23 @@ centered = false
 [node name="BackToHallway1" parent="Clickers" unique_id=881771067 instance=ExtResource("1_dti4s")]
 position = Vector2(160, 220)
 event_id = "day_study_back"
+
+[node name="Laptop" parent="Clickers" unique_id=1237581488 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_d87am")]
+position = Vector2(82, 106)
+still_image = ExtResource("5_tgrql")
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "use_laptop"
+flag_id = "ready_to_read_article"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Laptop" unique_id=526147947]
+visible = false
+polygon = PackedVector2Array(-21, -18, 5, -15, 6, 1, 24, 8, -4, 19, -20, 7)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Laptop" unique_id=372895823]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-20, -17, 4, -14, 5, 2, 20, 8, -3, 17, -19, 7)
 
 [node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=2016497385]
 position = Vector2(62.000004, 55.000004)

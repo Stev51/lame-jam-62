@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c1cgtfb7w62ca"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_2atqi"]
+[ext_resource type="Texture2D" uid="uid://4xa8slkj1jdq" path="res://assets/img/laptop0.png" id="2_2atqi"]
+[ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="3_ldq4t"]
+[ext_resource type="Texture2D" uid="uid://u210ax6u0cr4" path="res://assets/img/events/browser_icon.png" id="4_i5ip1"]
+[ext_resource type="Texture2D" uid="uid://kfjvqp8uj58l" path="res://assets/img/events/browser_icon_hover.png" id="5_i5ip1"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="6_cve4b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cve4b"]
+radius = 11.0
+
+[node name="RoomLaptop0" type="Node2D" unique_id=285811660]
+script = ExtResource("1_2atqi")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_2atqi")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Clicker" parent="Clickers" unique_id=881771067 instance=ExtResource("3_ldq4t")]
+position = Vector2(160, 120)
+still_image = ExtResource("4_i5ip1")
+hover_image = ExtResource("5_i5ip1")
+click_sound = ExtResource("6_cve4b")
+event_id = "laptop_0_to_laptop_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Clickers/Clicker" unique_id=1191240118]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_cve4b")
