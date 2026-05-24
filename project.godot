@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Lame Jam 62"
-run/main_scene="uid://bt886n25a1ofi"
+config/name="Lost in My House"
+run/main_scene="uid://c2hb7fnrp006j"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/img/icon.svg"
 

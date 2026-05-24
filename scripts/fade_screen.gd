@@ -6,8 +6,10 @@ signal fade_in_finished
 @onready var color_rect = $ColorRect
 @onready var anim_player = $AnimationPlayer
 
+'''
 func _ready() -> void:
 	color_rect.visible = true
+'''
 
 func fade_out() -> void:
 	color_rect.visible = true

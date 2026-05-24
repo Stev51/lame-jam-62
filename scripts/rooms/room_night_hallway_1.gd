@@ -9,5 +9,4 @@ func _ready() -> void:
 		PACBox.set_flag("seen_hallway_1", true)
 		
 		BGM.switch_bg_sound("nighttime_bgm")
-		BGM.player_node.volume_db = -5
 		BGM.play_bg_sound()
