@@ -11,13 +11,23 @@ var photo6_sprite = preload("res://assets/img/photos/photo6.png")
 var photo7_sprite = preload("res://assets/img/photos/photo7.png")
 
 var sprite_reference = {
+	
 	1: photo1_sprite,
 	2: photo2_sprite,
 	3: photo3_sprite,
 	4: photo4_sprite,
 	5: photo5_sprite,
 	6: photo6_sprite,
-	7: photo7_sprite
+	7: photo7_sprite,
+	
+	11: photo1_sprite,
+	12: photo2_sprite,
+	13: photo3_sprite,
+	14: photo4_sprite,
+	15: photo5_sprite,
+	16: photo6_sprite,
+	17: photo7_sprite
+	
 }
 
 func _ready() -> void:

@@ -105,6 +105,38 @@ func call_event(id: String) -> void:
 			
 			show_photo(7)
 			
+		"photo11_inspect":
+			
+			show_photo(11)
+			
+		"photo12_inspect":
+			
+			show_photo(12)
+			
+		"photo13_inspect":
+			
+			show_photo(13)
+			
+		"photo14_inspect":
+			
+			show_photo(14)
+			
+		"photo15_inspect":
+			
+			show_photo(15)
+			
+		"photo16_inspect":
+			
+			show_photo(16)
+			
+		"photo17_inspect":
+			
+			if not PACBox.get_flag("checked_censored_photo"):
+				PACBox.queue_dialog("check_censored_photo")
+			
+			PACBox.set_flag("checked_censored_photo", true)
+			show_photo(17)
+			
 		"placed_all_photos":
 			
 			PACBox.queue_dialog("placed_all_photos")
@@ -156,7 +188,9 @@ func call_event(id: String) -> void:
 			
 		"go_to_bed":
 			
-			pass
+			PACBox.gui_node.disable_quest_goal_display()
+			
+			PACBox.fade_to_room("room_night_master_bedroom")
 			
 		"day_front_door":
 			
@@ -352,6 +386,166 @@ func call_event(id: String) -> void:
 		"day_loft_back":
 			
 			PACBox.fade_to_room("room_day_upstairs_hallway_1")
+			
+		"night_foyer_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_1")
+			
+		"night_downstairs_hallway_1_back":
+			
+			PACBox.fade_to_room("room_night_living_room_1")
+			
+		"night_downstairs_hallway_1_to_stairs":
+			
+			PACBox.fade_to_room("room_night_downstairs_stairs")
+			
+		"night_downstairs_hallway_1_to_study":
+			
+			PACBox.fade_to_room("room_night_study")
+			
+		"night_downstairs_hallway_1_to_foyer":
+			
+			PACBox.fade_to_room("room_night_foyer")
+			
+		"night_downstairs_hallway_1_to_hallway_2":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_2")
+			
+		"night_study_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_1")
+			
+		"night_living_room_1_back":
+			
+			PACBox.fade_to_room("room_night_living_room_2")
+			
+		"night_living_room_1_to_hallway_1":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_1")
+			
+		"night_living_room_2_back":
+			
+			PACBox.fade_to_room("room_night_living_room_1")
+			
+		"night_living_room_2_to_hallway_3":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_3")
+			
+		"night_downstairs_hallway_2_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_1")
+			
+		"night_downstairs_hallway_2_to_dining":
+			
+			PACBox.fade_to_room("room_night_dining")
+			
+		"night_downstairs_hallway_2_to_kitchen":
+			
+			PACBox.fade_to_room("room_night_kitchen")
+			
+		"night_downstairs_hallway_2_to_hallway_3":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_3")
+			
+		"night_dining_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_2")
+			
+		"night_kitchen_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_2")
+			
+		"night_downstairs_hallway_3_back":
+			
+			PACBox.fade_to_room("room_night_living_room_2")
+			
+		"night_downstairs_hallway_3_to_laundry":
+			
+			PACBox.fade_to_room("room_night_laundry")
+			
+		"night_downstairs_hallway_3_to_hallway_2":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_2")
+			
+		"night_laundry_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_3")
+			
+		"night_downstairs_stairs_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_hallway_1")
+			
+		"night_downstairs_stairs_to_upstairs_stairs":
+			
+			PACBox.fade_to_room("room_night_upstairs_stairs")
+			
+		"night_upstairs_stairs_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_stairs")
+			
+		"night_upstairs_stairs_to_hallway_1":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_1")
+			
+		"night_upstairs_hallway_1_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_stairs")
+			
+		"night_upstairs_hallway_1_to_hallway_2":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_2")
+			
+		"night_upstairs_hallway_1_to_bedroom":
+			
+			PACBox.fade_to_room("room_night_bedroom_1")
+			
+		"night_upstairs_hallway_1_to_loft":
+			
+			PACBox.fade_to_room("room_night_loft")
+			
+		"night_upstairs_hallway_2_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_1")
+			
+		"night_upstairs_hallway_2_to_hallway_3":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_3")
+			
+		"night_upstairs_hallway_2_to_hallway_4":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_4")
+			
+		"night_upstairs_hallway_3_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_2")
+			
+		"night_upstairs_hallway_3_to_bedroom":
+			
+			PACBox.fade_to_room("room_night_bedroom_2")
+			
+		"night_upstairs_hallway_4_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_2")
+			
+		"night_upstairs_hallway_4_to_master_bedroom":
+			
+			PACBox.fade_to_room("room_night_master_bedroom")
+			
+		"night_bedroom_1_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_1")
+			
+		"night_bedroom_2_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_3")
+			
+		"night_master_bedroom_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_4")
+			
+		"night_loft_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_hallway_1")
 			
 		"demo_event_go_room1":
 			

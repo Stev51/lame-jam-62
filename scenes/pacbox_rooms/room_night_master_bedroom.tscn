@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dbcbibjxnhbc7"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_u1871"]
+[ext_resource type="Texture2D" uid="uid://cg4s7i24q20b0" path="res://assets/img/bg/night_master_bedroom.png" id="2_uvjwa"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_u84t6"]
+[ext_resource type="PackedScene" uid="uid://bokfsryx8nyi4" path="res://scenes/clickers/frame_right_clicker.tscn" id="7_kj44y"]
+
+[node name="RoomDayMasterBedroom" type="Node2D" unique_id=285811660]
+script = ExtResource("1_u1871")
+display_name = "Your Bedroom"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_uvjwa")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("3_u84t6")]
+position = Vector2(160, 220)
+event_id = "night_master_bedroom_back"
+flag_id = "checked_censored_photo"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=732117278]
+position = Vector2(293, 57)
+scale = Vector2(0.10942089, 0.10942089)
+
+[node name="FrameRightClicker" parent="Clickers/PhotoGroup" unique_id=2005970089 instance=ExtResource("7_kj44y")]
+event_id = "photo17_inspect"

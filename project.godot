@@ -26,6 +26,7 @@ PhotoShower="*uid://dt8f7nj4u1oci"
 
 directories/dch_directory={}
 directories/dtl_directory={
+"check_censored_photo": "res://check_censored_photo.dtl",
 "day_downstairs_bathroom": "res://assets/text/day_downstairs_bathroom.dtl",
 "day_front_door": "res://assets/text/day_front_door.dtl",
 "day_master_bathroom": "res://assets/text/day_master_bathroom.dtl",

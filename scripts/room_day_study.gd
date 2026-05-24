@@ -2,10 +2,10 @@ extends Room
 
 func _ready() -> void:
 	
-	await FadeScreen.fade_in_finished
-	
 	if PACBox.get_flag("ready_to_read_article") and not PACBox.get_flag("done_reading_article"):
 		$Clickers/Laptop.visible = true
+	
+	await FadeScreen.fade_in_finished
 	
 	if PACBox.get_flag("done_reading_article") and not PACBox.get_flag("heard_done_dialog"):
 		

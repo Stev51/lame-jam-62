@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cdrlr0vde31wu"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_bfmux"]
+[ext_resource type="Texture2D" uid="uid://gg3drlek0rkl" path="res://assets/img/bg/day_upstairs_hallway_2.png" id="2_nyrpt"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_6s1fs"]
+
+[node name="RoomDayUpstairsHallway2" type="Node2D" unique_id=285811660]
+script = ExtResource("1_bfmux")
+display_name = "Upstairs Hallway"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_nyrpt")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("3_6s1fs")]
+position = Vector2(160, 220)
+event_id = "day_upstairs_hallway_2_back"
+
+[node name="Hallway3" parent="Clickers" unique_id=347288616 instance=ExtResource("3_6s1fs")]
+position = Vector2(20, 120)
+rotation = 1.5707964
+event_id = "day_upstairs_hallway_2_to_hallway_3"
+
+[node name="Hallway4" parent="Clickers" unique_id=1165189107 instance=ExtResource("3_6s1fs")]
+position = Vector2(300, 120)
+rotation = -1.5707964
+event_id = "day_upstairs_hallway_2_to_hallway_4"

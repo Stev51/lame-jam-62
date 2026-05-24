@@ -16,6 +16,8 @@ var flags = {
 	"photo6": false,
 	"photo7": false,
 	
+	"checked_censored_photo": false,
+	
 	"ready_to_read_article": false,
 	"done_reading_article": false,
 	"heard_done_dialog": false

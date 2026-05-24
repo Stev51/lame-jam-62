@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ddxs6hsdmw8y4"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_6rbfh"]
+[ext_resource type="Texture2D" uid="uid://cea8ftyj4rnmx" path="res://assets/img/bg/day_upstairs_hallway_4.png" id="2_bcl1s"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_y2tx2"]
+[ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="4_xdfwc"]
+
+[node name="RoomDayUpstairsHallway4" type="Node2D" unique_id=285811660]
+script = ExtResource("1_6rbfh")
+display_name = "Upstairs Hallway"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_bcl1s")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="BackToHallway" parent="Clickers" unique_id=881771067 instance=ExtResource("3_y2tx2")]
+position = Vector2(160, 220)
+event_id = "day_upstairs_hallway_4_back"
+
+[node name="MasterBedroom" parent="Clickers" unique_id=729301203 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_xdfwc")]
+position = Vector2(75, 93)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "day_upstairs_hallway_4_to_master_bedroom"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/MasterBedroom" unique_id=1810243904]
+visible = false
+polygon = PackedVector2Array(-9, -85, -9, 97, 8, 71, 8, -74)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/MasterBedroom" unique_id=1071048114]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-8, -84, -9, 97, 8, 70, 8, -74)
