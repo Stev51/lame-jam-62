@@ -1,0 +1,24 @@
+[style name="dialogic_borderless_style"]
+[wait time="0.5"]
+You have nightmares.\
+\
+They're worse than usual.
+[wait time="0.5"]
+You dream about the old house.\
+\
+You're standing outside.\
+\
+You can hear Sean's voice calling you.
+[wait time="0.5"]
+He sounds far away.\
+\
+He says he's lost.\
+\
+You can't get the door open.
+[wait time="0.5"]
+Your eyes flicker open and you're laying in sweat.
+[wait time="0.5"]
+Your eyes are reflexively drawn to the photo hanging on the wall.\
+\
+Something seems off.
+[wait time="0.5"]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c5y8gaoqg5dvh"]
+
+[ext_resource type="Script" uid="uid://dkx0da8i6ot2y" path="res://scripts/rooms/room_between.gd" id="1_u2ekw"]
+
+[node name="RoomBetween" type="Node2D" unique_id=285811660]
+script = ExtResource("1_u2ekw")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]

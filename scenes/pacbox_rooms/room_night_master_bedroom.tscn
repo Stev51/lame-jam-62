@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dbcbibjxnhbc7"]
 
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_u1871"]
+[ext_resource type="Script" uid="uid://b6traxgcfjllf" path="res://scripts/rooms/room_night_master_bedroom.gd" id="1_uvjwa"]
 [ext_resource type="Texture2D" uid="uid://cg4s7i24q20b0" path="res://assets/img/bg/night_master_bedroom.png" id="2_uvjwa"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_u84t6"]
 [ext_resource type="PackedScene" uid="uid://bokfsryx8nyi4" path="res://scenes/clickers/frame_right_clicker.tscn" id="7_kj44y"]
 
 [node name="RoomDayMasterBedroom" type="Node2D" unique_id=285811660]
-script = ExtResource("1_u1871")
+script = ExtResource("1_uvjwa")
 display_name = "Your Bedroom"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]

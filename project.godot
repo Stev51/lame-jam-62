@@ -27,6 +27,7 @@ PhotoShower="*uid://dt8f7nj4u1oci"
 directories/dch_directory={}
 directories/dtl_directory={
 "alt_hallway": "res://assets/text/alt_hallway.dtl",
+"between": "res://addons/dialogic/Example Assets/Fonts/between.dtl",
 "check_censored_photo": "res://assets/text/check_censored_photo.dtl",
 "day_downstairs_bathroom": "res://assets/text/day_downstairs_bathroom.dtl",
 "day_front_door": "res://assets/text/day_front_door.dtl",

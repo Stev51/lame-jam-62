@@ -189,8 +189,9 @@ func call_event(id: String) -> void:
 		"go_to_bed":
 			
 			PACBox.gui_node.disable_quest_goal_display()
+			PACBox.gui_node.hide_room_text_display()
 			
-			PACBox.fade_to_room("room_night_master_bedroom")
+			PACBox.slow_fade_to_room("room_between")
 			
 		"day_front_door":
 			
@@ -482,8 +483,13 @@ func call_event(id: String) -> void:
 		"night_upstairs_hallway_1_to_loft":
 			
 			if not PACBox.get_flag("seen_night_living_room"):
+				
 				PACBox.fade_to_room("room_night_loft")
+				
 			else:
+				
+				PACBox.gui_node.disable_room_text_display()
+				
 				PACBox.fade_to_room("room_night_loft_alt")
 			
 		"night_upstairs_hallway_2_back":

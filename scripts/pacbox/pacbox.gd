@@ -64,6 +64,20 @@ func fade_to_room(id: String) -> bool:
 	
 	return result
 
+func slow_fade_to_room(id: String) -> bool:
+	
+	hoverable = false
+	
+	FadeScreen.fade_out_slow()
+	await FadeScreen.fade_out_finished
+	
+	var result = switch_room(id)
+	
+	FadeScreen.fade_in_slow()
+	await FadeScreen.fade_in_finished
+	
+	return result
+
 func switch_room(id: String) -> bool:
 	
 	hoverable = false
