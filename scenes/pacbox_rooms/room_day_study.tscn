@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ehamk36ssada"]
 
-[ext_resource type="Script" uid="uid://8ref30vsrtto" path="res://scripts/room_day_study.gd" id="1_d87am"]
+[ext_resource type="Script" uid="uid://8ref30vsrtto" path="res://scripts/rooms/room_day_study.gd" id="1_d87am"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="1_dti4s"]
 [ext_resource type="Texture2D" uid="uid://b3486xmtlluyx" path="res://assets/img/bg/day_study.png" id="2_pt5cu"]
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="4_d87am"]

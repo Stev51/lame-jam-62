@@ -13,6 +13,6 @@ func _ready() -> void:
 	await FadeScreen.fade_out_finished
 	'''
 	
-	PACBox.start("room_day_living_room_2")
+	PACBox.start("room_night_master_bedroom")
 	
 	FadeScreen.fade_in_slow()

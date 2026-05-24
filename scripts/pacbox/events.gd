@@ -471,10 +471,6 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_night_downstairs_hallway_3")
 			
-		"night_downstairs_stairs_back":
-			
-			PACBox.fade_to_room("room_night_downstairs_hallway_1")
-			
 		"night_downstairs_stairs_to_upstairs_stairs":
 			
 			PACBox.fade_to_room("room_night_upstairs_stairs")
@@ -546,6 +542,26 @@ func call_event(id: String) -> void:
 		"night_loft_back":
 			
 			PACBox.fade_to_room("room_night_upstairs_hallway_1")
+			
+		"night_downstairs_stairs_back":
+			
+			PACBox.fade_to_room("room_night_upstairs_stairs_2")
+			
+		"night_upstairs_stairs_2_to_downstairs_stairs":
+			
+			PACBox.fade_to_room("room_night_downstairs_stairs")
+			
+		"night_upstairs_stairs_2_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_stairs_2")
+			
+		"night_downstairs_stairs_2_to_upstairs_stairs_2":
+			
+			PACBox.fade_to_room("room_night_upstairs_stairs_2")
+			
+		"night_downstairs_stairs_2_back":
+			
+			PACBox.fade_to_room("room_night_hallway_1")
 			
 		"demo_event_go_room1":
 			

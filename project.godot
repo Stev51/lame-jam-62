@@ -38,6 +38,7 @@ directories/dtl_directory={
 "get_photos": "res://assets/text/get_photos.dtl",
 "inspect_kid_boxes": "res://assets/text/inspect_kid_boxes.dtl",
 "intro": "res://assets/text/intro.dtl",
+"night_stairs": "res://night_stairs.dtl",
 "placed_all_photos": "res://placed_all_photos.dtl"
 }
 layout/style_directory={
