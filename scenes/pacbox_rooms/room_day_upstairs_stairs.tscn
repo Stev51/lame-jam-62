@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_ckjko"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_e474s"]
 [ext_resource type="Texture2D" uid="uid://b41j8m57t8v0b" path="res://assets/img/bg/day_upstairs_stairs.png" id="2_wern2"]
+[ext_resource type="PackedScene" uid="uid://b7qcyf2wfrs35" path="res://scenes/clickers/photo_center_clicker.tscn" id="6_q03p2"]
+[ext_resource type="PackedScene" uid="uid://brnslstai1ik0" path="res://scenes/clickers/frame_center_clicker.tscn" id="7_y61lx"]
 
 [node name="RoomDayUpstairsStairs" type="Node2D" unique_id=285811660]
 script = ExtResource("1_ckjko")
@@ -22,3 +24,16 @@ event_id = "day_upstairs_stairs_back"
 position = Vector2(20, 120)
 rotation = 1.5707964
 event_id = "day_upstairs_stairs_to_hallway_1"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=1643746485]
+position = Vector2(266.00003, 18.000002)
+scale = Vector2(0.24501078, 0.24501078)
+
+[node name="PhotoCenterClicker" parent="Clickers/PhotoGroup" unique_id=27213840 instance=ExtResource("6_q03p2")]
+event_id = "photo3_place"
+flag_id = "photo3"
+invert_flag = true
+
+[node name="FrameCenterClicker" parent="Clickers/PhotoGroup" unique_id=946879909 instance=ExtResource("7_y61lx")]
+event_id = "photo3_inspect"
+flag_id = "photo3"

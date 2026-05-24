@@ -149,14 +149,10 @@ func call_event(id: String) -> void:
 			
 		"done_using_laptop":
 			
-			PACBox.set_flag("ready_to_read_article", false)
 			PACBox.set_flag("done_reading_article", true)
+			PACBox.gui_node.update_quest_text("Go to Your Bedroom")
 			
 			PACBox.fade_to_room("room_day_study")
-			
-			PACBox.gui_node.unhide_room_text_display()
-			PACBox.gui_node.unhide_photo_place_goal_display()
-			PACBox.gui_node.unhide_quest_goal_display()
 			
 		"day_front_door":
 			

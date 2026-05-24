@@ -20,10 +20,11 @@ centered = false
 position = Vector2(160, 220)
 event_id = "photo_box_back"
 
-[node name="Photos" parent="Clickers" unique_id=881771067 instance=ExtResource("2_jwoob")]
+[node name="Photos" parent="Clickers" unique_id=881771067 node_paths=PackedStringArray("hover_shape") instance=ExtResource("2_jwoob")]
 position = Vector2(165, 136)
 still_image = ExtResource("5_61wtw")
 hover_image = null
+hover_shape = NodePath("Polygon2D")
 event_id = "get_photos"
 flag_id = "got_photos"
 invert_flag = true
