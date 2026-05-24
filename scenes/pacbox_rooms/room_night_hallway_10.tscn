@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b4o8i0m3ab7b0"]
 
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_vrffn"]
+[ext_resource type="Script" uid="uid://cj7jegjt1vf8c" path="res://scripts/rooms/room_night_hallway_10.gd" id="1_ctkhu"]
 [ext_resource type="Texture2D" uid="uid://byykqhgnj1kes" path="res://assets/img/bg/night_hallway_dead_end.png" id="2_vrffn"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_0huqb"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="4_ccrm1"]
 [ext_resource type="Texture2D" uid="uid://byb6ut3cxk3fb" path="res://assets/img/events/hallway_10_door.png" id="5_ctkhu"]
 
 [node name="NightHallway10" type="Node2D" unique_id=285811660]
-script = ExtResource("1_vrffn")
+script = ExtResource("1_ctkhu")
 display_name = "Hallways"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]

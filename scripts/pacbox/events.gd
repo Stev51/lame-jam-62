@@ -581,7 +581,10 @@ func call_event(id: String) -> void:
 			
 		"night_hallway_4_forward":
 			
-			PACBox.fade_to_room("room_night_hallway_5")
+			if not PACBox.get_flag("seen_night_living_room"):
+				PACBox.fade_to_room("room_night_hallway_5")
+			else:
+				PACBox.fade_to_room("room_night_hallway_alt")
 			
 		"night_hallway_5_back":
 			
@@ -625,7 +628,10 @@ func call_event(id: String) -> void:
 			
 		"night_hallway_9_back":
 			
-			PACBox.fade_to_room("room_night_hallway_5")
+			if not PACBox.get_flag("seen_night_living_room"):
+				PACBox.fade_to_room("room_night_hallway_5")
+			else:
+				PACBox.fade_to_room("room_night_hallway_alt")
 			
 		"night_hallway_9_forward":
 			
@@ -650,6 +656,14 @@ func call_event(id: String) -> void:
 		"night_hallway_11_to_living_room":
 			
 			PACBox.fade_to_room("room_night_living_room")
+			
+		"night_hallway_alt_back":
+			
+			PACBox.fade_to_room("room_night_hallway_9")
+			
+		"night_hallway_alt_right":
+			
+			PACBox.fade_to_room("room_night_hallway_4")
 			
 		"night_living_room_back":
 			

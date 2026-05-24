@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://k25g5yjwyocc"]
 
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_jccce"]
+[ext_resource type="Script" uid="uid://nnolootmi5hc" path="res://scripts/rooms/room_night_living_room.gd" id="1_pxts0"]
 [ext_resource type="Texture2D" uid="uid://cp35m3t1saqic" path="res://assets/img/bg/night_living_room.png" id="2_pxts0"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_gpmhr"]
 
 [node name="NightLivingRoom" type="Node2D" unique_id=285811660]
-script = ExtResource("1_jccce")
+script = ExtResource("1_pxts0")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
 texture = ExtResource("2_pxts0")

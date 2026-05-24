@@ -24,6 +24,11 @@ var flags = {
 	"seen_night_stairs": false,
 	"seen_hallway_4": false,
 	"seen_hallway_5": false,
-	"seen_night_foyer": false
+	"seen_night_foyer": false,
+	
+	"seen_hallway_10": false,
+	"seen_hallway_10_door": false,
+	
+	"seen_night_living_room": false
 	
 }
