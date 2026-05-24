@@ -26,20 +26,17 @@ PhotoShower="*uid://dt8f7nj4u1oci"
 
 directories/dch_directory={}
 directories/dtl_directory={
-"check_censored_photo": "res://check_censored_photo.dtl",
+"check_censored_photo": "res://assets/text/check_censored_photo.dtl",
 "day_downstairs_bathroom": "res://assets/text/day_downstairs_bathroom.dtl",
 "day_front_door": "res://assets/text/day_front_door.dtl",
 "day_master_bathroom": "res://assets/text/day_master_bathroom.dtl",
 "day_upstairs_bathroom": "res://assets/text/day_upstairs_bathroom.dtl",
-"demo_timeline_1": "res://assets/text/demo_timeline_1.dtl",
-"demo_timeline_2": "res://assets/text/demo_timeline_2.dtl",
-"demo_timeline_3": "res://assets/text/demo_timeline_3.dtl",
-"done_reading_article": "res://done_reading_article.dtl",
+"done_reading_article": "res://assets/text/done_reading_article.dtl",
 "get_photos": "res://assets/text/get_photos.dtl",
 "inspect_kid_boxes": "res://assets/text/inspect_kid_boxes.dtl",
 "intro": "res://assets/text/intro.dtl",
-"night_stairs": "res://night_stairs.dtl",
-"placed_all_photos": "res://placed_all_photos.dtl"
+"night_stairs": "res://assets/text/night_stairs.dtl",
+"placed_all_photos": "res://assets/text/placed_all_photos.dtl"
 }
 layout/style_directory={
 "": "res://resources/dialogic_default_style.tres",
