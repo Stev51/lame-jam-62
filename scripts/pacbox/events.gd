@@ -153,6 +153,8 @@ func call_event(id: String) -> void:
 			PACBox.gui_node.hide_photo_place_goal_display()
 			PACBox.gui_node.hide_quest_goal_display()
 			
+			BGM.stop_bg_sound()
+			
 			PACBox.fade_to_room("room_laptop_0")
 			
 		"laptop_0_to_laptop_1":

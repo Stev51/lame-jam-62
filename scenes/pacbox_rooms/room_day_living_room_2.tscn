@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://irdmj5k03lgd"]
 
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_v63wn"]
+[ext_resource type="Script" uid="uid://ba31cutwr3ygy" path="res://scripts/rooms/room_day_living_room_2.gd" id="1_o7d4f"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_57ule"]
 [ext_resource type="Texture2D" uid="uid://chjmuljiibbmr" path="res://assets/img/bg/day_living_room_2.png" id="2_o7d4f"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="3_s74rf"]
@@ -11,7 +11,7 @@
 size = Vector2(69, 73)
 
 [node name="RoomDayLivingRoom2" type="Node2D" unique_id=285811660]
-script = ExtResource("1_v63wn")
+script = ExtResource("1_o7d4f")
 display_name = "Living Room"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
