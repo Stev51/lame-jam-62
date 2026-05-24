@@ -10,6 +10,14 @@ var photo5_sprite = preload("res://assets/img/photos/photo5.png")
 var photo6_sprite = preload("res://assets/img/photos/photo6.png")
 var photo7_sprite = preload("res://assets/img/photos/photo7.png")
 
+var photo11_sprite = preload("res://assets/img/photos/photo11.png")
+var photo12_sprite = preload("res://assets/img/photos/photo12.png")
+var photo13_sprite = preload("res://assets/img/photos/photo13.png")
+var photo14_sprite = preload("res://assets/img/photos/photo14.png")
+var photo15_sprite = preload("res://assets/img/photos/photo15.png")
+var photo16_sprite = preload("res://assets/img/photos/photo16.png")
+var photo17_sprite = preload("res://assets/img/photos/photo17.png")
+
 var sprite_reference = {
 	
 	1: photo1_sprite,
@@ -20,13 +28,13 @@ var sprite_reference = {
 	6: photo6_sprite,
 	7: photo7_sprite,
 	
-	11: photo1_sprite,
-	12: photo2_sprite,
-	13: photo3_sprite,
-	14: photo4_sprite,
-	15: photo5_sprite,
-	16: photo6_sprite,
-	17: photo7_sprite
+	11: photo11_sprite,
+	12: photo12_sprite,
+	13: photo13_sprite,
+	14: photo14_sprite,
+	15: photo15_sprite,
+	16: photo16_sprite,
+	17: photo17_sprite
 	
 }
 
