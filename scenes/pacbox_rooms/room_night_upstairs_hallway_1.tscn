@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5mf0gp1yckp3"]
 
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_ovcyt"]
+[ext_resource type="Script" uid="uid://dig2qey41q8bm" path="res://scripts/rooms/room_night_upstairs_hallway_1.gd" id="1_ovcyt"]
 [ext_resource type="Texture2D" uid="uid://wfcbxpnb2wv3" path="res://assets/img/bg/night_upstairs_hallway_1.png" id="2_ovcyt"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_pao44"]
 [ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="4_1lm51"]
@@ -19,11 +19,15 @@ centered = false
 [node name="BackToStairs" parent="Clickers" unique_id=881771067 instance=ExtResource("3_pao44")]
 position = Vector2(160, 220)
 event_id = "night_upstairs_hallway_1_back"
+flag_id = "seen_night_living_room"
+invert_flag = true
 
 [node name="Hallway" parent="Clickers" unique_id=300355399 instance=ExtResource("3_pao44")]
 position = Vector2(160, 20)
 rotation = 3.1415927
 event_id = "night_upstairs_hallway_1_to_hallway_2"
+flag_id = "seen_night_living_room"
+invert_flag = true
 
 [node name="Bedroom" parent="Clickers" unique_id=1245830838 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_1lm51")]
 position = Vector2(42, 101)
@@ -31,6 +35,8 @@ still_image = null
 hover_image = null
 hover_shape = NodePath("Polygon2D")
 event_id = "night_upstairs_hallway_1_to_bedroom"
+flag_id = "seen_night_living_room"
+invert_flag = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Bedroom" unique_id=1079045467]
 visible = false
@@ -63,6 +69,8 @@ still_image = null
 hover_image = null
 hover_shape = NodePath("Polygon2D")
 event_id = "day_upstairs_hallway_1_to_bathroom"
+flag_id = "seen_night_living_room"
+invert_flag = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Bathroom" unique_id=1186589825]
 visible = false

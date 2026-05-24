@@ -481,7 +481,10 @@ func call_event(id: String) -> void:
 			
 		"night_upstairs_hallway_1_to_loft":
 			
-			PACBox.fade_to_room("room_night_loft")
+			if not PACBox.get_flag("seen_night_living_room"):
+				PACBox.fade_to_room("room_night_loft")
+			else:
+				PACBox.fade_to_room("room_night_loft_alt")
 			
 		"night_upstairs_hallway_2_back":
 			

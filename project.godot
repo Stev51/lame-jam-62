@@ -43,6 +43,7 @@ directories/dtl_directory={
 "night_foyer": "res://assets/text/night_foyer.dtl",
 "night_living_room": "res://assets/text/night_living_room.dtl",
 "night_stairs": "res://assets/text/night_stairs.dtl",
+"night_upstairs_hallway": "res://assets/text/night_upstairs_hallway.dtl",
 "placed_all_photos": "res://assets/text/placed_all_photos.dtl"
 }
 layout/style_directory={

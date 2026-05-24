@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bwxl1bc3b6tel"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_trb8r"]
+[ext_resource type="Texture2D" uid="uid://cve5y8yu2u00b" path="res://assets/img/icon.svg" id="2_617bg"]
+
+[node name="NightLoftAlt" type="Node2D" unique_id=285811660]
+script = ExtResource("1_trb8r")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_617bg")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
