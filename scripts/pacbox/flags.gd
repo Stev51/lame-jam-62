@@ -14,6 +14,9 @@ var flags = {
 	"photo6": false,
 	"photo7": false,
 	
+	"seen_kitchen": false,
+	"seen_empty_bedroom": false,
+	
 	"checked_censored_photo": false,
 	
 	"ready_to_read_article": false,
