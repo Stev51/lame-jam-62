@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ds7tiiuytw5ws" path="res://scripts/bgm.gd" id="1_q5y64"]
 [ext_resource type="AudioStream" uid="uid://c27f4yfpdwmkg" path="res://assets/audio/pick_up.mp3" id="2_3c3jb"]
+[ext_resource type="AudioStream" uid="uid://cem8iyy67f0bu" path="res://assets/audio/bgm/freesound_community-child-crying-54517.mp3" id="3_u4ddl"]
 
 [node name="BGM" type="Control" unique_id=1223203295]
 layout_mode = 3
@@ -19,3 +20,6 @@ script = ExtResource("1_q5y64")
 [node name="PickupPlayer" type="AudioStreamPlayer" parent="." unique_id=502472788]
 stream = ExtResource("2_3c3jb")
 volume_db = -4.0
+
+[node name="CryPlayer" type="AudioStreamPlayer" parent="." unique_id=1680419704]
+stream = ExtResource("3_u4ddl")
