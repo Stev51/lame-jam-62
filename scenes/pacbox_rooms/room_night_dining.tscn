@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://plnksv204vl3"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_rls53"]
+[ext_resource type="Texture2D" uid="uid://3rta7cfp5arg" path="res://assets/img/bg/night_dining_room.png" id="2_rls53"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_kyy6m"]
+[ext_resource type="PackedScene" uid="uid://brnslstai1ik0" path="res://scenes/clickers/frame_center_clicker.tscn" id="4_xx74u"]
+
+[node name="NightDiningRoom" type="Node2D" unique_id=285811660]
+script = ExtResource("1_rls53")
+display_name = "Dining Room"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_rls53")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_kyy6m")]
+position = Vector2(160, 220)
+event_id = "night_dining_back"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=675210385]
+position = Vector2(159, 45)
+scale = Vector2(0.15496308, 0.15496308)
+
+[node name="FrameCenterClicker" parent="Clickers/PhotoGroup" unique_id=2084151521 instance=ExtResource("4_xx74u")]
+event_id = "photo15_inspect"

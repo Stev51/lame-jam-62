@@ -182,7 +182,7 @@ func call_event(id: String) -> void:
 		"done_using_laptop":
 			
 			PACBox.set_flag("done_reading_article", true)
-			PACBox.gui_node.update_quest_text("Go to Your Bedroom")
+			PACBox.gui_node.update_quest_text("Go to Bed")
 			
 			PACBox.fade_to_room("room_day_study")
 			
@@ -387,10 +387,6 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_day_upstairs_hallway_1")
 			
-		"night_foyer_back":
-			
-			PACBox.fade_to_room("room_night_downstairs_hallway_1")
-			
 		"night_downstairs_hallway_1_back":
 			
 			PACBox.fade_to_room("room_night_living_room_1")
@@ -410,10 +406,6 @@ func call_event(id: String) -> void:
 		"night_downstairs_hallway_1_to_hallway_2":
 			
 			PACBox.fade_to_room("room_night_downstairs_hallway_2")
-			
-		"night_study_back":
-			
-			PACBox.fade_to_room("room_night_downstairs_hallway_1")
 			
 		"night_living_room_1_back":
 			
@@ -447,10 +439,6 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_night_downstairs_hallway_3")
 			
-		"night_dining_back":
-			
-			PACBox.fade_to_room("room_night_downstairs_hallway_2")
-			
 		"night_kitchen_back":
 			
 			PACBox.fade_to_room("room_night_downstairs_hallway_2")
@@ -466,10 +454,6 @@ func call_event(id: String) -> void:
 		"night_downstairs_hallway_3_to_hallway_2":
 			
 			PACBox.fade_to_room("room_night_downstairs_hallway_2")
-			
-		"night_laundry_back":
-			
-			PACBox.fade_to_room("room_night_downstairs_hallway_3")
 			
 		"night_downstairs_stairs_to_upstairs_stairs":
 			
@@ -666,6 +650,26 @@ func call_event(id: String) -> void:
 		"night_hallway_11_to_living_room":
 			
 			PACBox.fade_to_room("room_night_living_room")
+			
+		"night_living_room_back":
+			
+			PACBox.fade_to_room("room_night_hallway_11")
+			
+		"night_laundry_back":
+			
+			PACBox.fade_to_room("room_night_hallway_9")
+			
+		"night_foyer_back":
+			
+			PACBox.fade_to_room("room_night_hallway_8")
+			
+		"night_dining_back":
+			
+			PACBox.fade_to_room("room_night_hallway_6")
+			
+		"night_study_back":
+			
+			PACBox.fade_to_room("room_night_hallway_2")
 			
 		"DEFAULT":
 			

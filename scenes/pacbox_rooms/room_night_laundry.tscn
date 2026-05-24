@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cg4wgfltyjvtq"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_uki8n"]
+[ext_resource type="Texture2D" uid="uid://b50mmhwu17eog" path="res://assets/img/bg/night_laundry.png" id="2_uki8n"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_odcta"]
+[ext_resource type="PackedScene" uid="uid://bt3cseq11cv1k" path="res://scenes/clickers/frame_left_clicker.tscn" id="4_trahn"]
+
+[node name="NightLaundry" type="Node2D" unique_id=285811660]
+script = ExtResource("1_uki8n")
+display_name = "Laundry Room"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_uki8n")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_odcta")]
+position = Vector2(160, 220)
+event_id = "night_laundry_back"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=2051651145]
+position = Vector2(58, 75.99999)
+scale = Vector2(0.11736354, 0.11736354)
+
+[node name="FrameLeftClicker" parent="Clickers/PhotoGroup" unique_id=690920950 instance=ExtResource("4_trahn")]
+event_id = "photo12_inspect"

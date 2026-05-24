@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://db1k835nssh4n"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_1xw6e"]
+[ext_resource type="Texture2D" uid="uid://chafwj4jl1pvp" path="res://assets/img/bg/night_study.png" id="2_1xw6e"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_n3jm6"]
+
+[node name="NightStudy" type="Node2D" unique_id=285811660]
+script = ExtResource("1_1xw6e")
+display_name = "Office"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_1xw6e")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_n3jm6")]
+position = Vector2(160, 220)
+event_id = "night_study_back"

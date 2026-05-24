@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b51r23f7cq8uc"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_fc4a5"]
+[ext_resource type="Texture2D" uid="uid://c6yglm6r62d4w" path="res://assets/img/bg/night_foyer.png" id="2_fc4a5"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_n7oub"]
+[ext_resource type="PackedScene" uid="uid://bt3cseq11cv1k" path="res://scenes/clickers/frame_left_clicker.tscn" id="4_60aat"]
+
+[node name="NightFoyer" type="Node2D" unique_id=285811660]
+script = ExtResource("1_fc4a5")
+display_name = "Foyer"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_fc4a5")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_n7oub")]
+position = Vector2(160, 220)
+event_id = "night_foyer_back"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=938508476]
+position = Vector2(60, 51.000004)
+scale = Vector2(0.11736354, 0.11736354)
+
+[node name="FrameLeftClicker" parent="Clickers/PhotoGroup" unique_id=402633449 instance=ExtResource("4_60aat")]
+event_id = "photo14_inspect"
