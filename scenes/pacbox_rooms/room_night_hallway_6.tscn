@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c10pj5w2hha4n"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_55n8c"]
+[ext_resource type="Texture2D" uid="uid://dp7pjtu4p0tmo" path="res://assets/img/bg/night_hallway_door_right.png" id="2_55n8c"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_x3wsn"]
+[ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="4_wt4wm"]
+
+[node name="NightHallway6" type="Node2D" unique_id=285811660]
+script = ExtResource("1_55n8c")
+display_name = "Hallways"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_55n8c")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_x3wsn")]
+position = Vector2(160, 220)
+event_id = "night_hallway_6_back"
+
+[node name="Forward" parent="Clickers" unique_id=1006139417 instance=ExtResource("3_x3wsn")]
+position = Vector2(160, 20)
+rotation = 3.1415927
+event_id = "night_hallway_6_forward"
+
+[node name="Dining Room" parent="Clickers" unique_id=1402531466 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_wt4wm")]
+position = Vector2(212, 84)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "night_hallway_6_to_dining"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Dining Room" unique_id=1793622601]
+visible = false
+polygon = PackedVector2Array(6, -53, -6, -45, -6, 47, 6, 66)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Dining Room" unique_id=671491509]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(5, -51, -6, -44, -5, 48, 6, 65)

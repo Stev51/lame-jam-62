@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dd4o3wubtycnw"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_wic65"]
+[ext_resource type="Texture2D" uid="uid://dgts1603121fu" path="res://assets/img/bg/night_hallway_door_left.png" id="2_yco2t"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_6oqfj"]
+[ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="4_00vv2"]
+
+[node name="NightHallway9" type="Node2D" unique_id=285811660]
+script = ExtResource("1_wic65")
+display_name = "Hallways"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_yco2t")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_6oqfj")]
+position = Vector2(160, 220)
+event_id = "night_hallway_9_back"
+
+[node name="Forward" parent="Clickers" unique_id=1006139417 instance=ExtResource("3_6oqfj")]
+position = Vector2(160, 20)
+rotation = 3.1415927
+event_id = "night_hallway_9_forward"
+
+[node name="Laundry" parent="Clickers" unique_id=1402531466 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_00vv2")]
+position = Vector2(108, 86)
+still_image = null
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "night_hallway_9_to_laundry"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Laundry" unique_id=2019471902]
+visible = false
+polygon = PackedVector2Array(-6, -54, 6, -47, 6, 45, -6, 64)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Laundry" unique_id=433242893]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-5, -53, 6, -46, 5, 46, -5, 62)

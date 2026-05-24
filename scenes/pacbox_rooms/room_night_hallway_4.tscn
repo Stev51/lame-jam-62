@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ck4wle8n2m68i"]
+
+[ext_resource type="Script" uid="uid://c2voiclrwqe82" path="res://scripts/rooms/room_night_hallway_4.gd" id="1_37leq"]
+[ext_resource type="Texture2D" uid="uid://bdj2al0ni8ssr" path="res://assets/img/bg/night_hallway_long.png" id="2_ju6x8"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_kovhc"]
+
+[node name="NightHallway4" type="Node2D" unique_id=285811660]
+script = ExtResource("1_37leq")
+display_name = "Hallways"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_ju6x8")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_kovhc")]
+position = Vector2(160, 220)
+event_id = "night_hallway_4_back"
+
+[node name="Forward" parent="Clickers" unique_id=1006139417 instance=ExtResource("3_kovhc")]
+position = Vector2(160, 20)
+rotation = 3.1415927
+event_id = "night_hallway_4_forward"

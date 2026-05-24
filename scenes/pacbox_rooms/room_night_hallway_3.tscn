@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c1kwrh0wu1jl7"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_gedsu"]
+[ext_resource type="Texture2D" uid="uid://bdj2al0ni8ssr" path="res://assets/img/bg/night_hallway_long.png" id="2_8g2j8"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_kaewg"]
+[ext_resource type="PackedScene" uid="uid://bt3cseq11cv1k" path="res://scenes/clickers/frame_left_clicker.tscn" id="4_8g2j8"]
+
+[node name="NightHallway3" type="Node2D" unique_id=285811660]
+script = ExtResource("1_gedsu")
+display_name = "Hallways"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_8g2j8")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_kaewg")]
+position = Vector2(160, 220)
+event_id = "night_hallway_3_back"
+
+[node name="Forward" parent="Clickers" unique_id=1006139417 instance=ExtResource("3_kaewg")]
+position = Vector2(160, 20)
+rotation = 3.1415927
+event_id = "night_hallway_3_forward"
+
+[node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=731242343]
+position = Vector2(59.000004, 34)
+scale = Vector2(0.16275866, 0.16275866)
+
+[node name="FrameLeftClicker" parent="Clickers/PhotoGroup" unique_id=32908009 instance=ExtResource("4_8g2j8")]
+event_id = "photo11_inspect"

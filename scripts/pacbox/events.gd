@@ -563,6 +563,110 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_night_hallway_1")
 			
+		"night_hallway_1_back":
+			
+			PACBox.fade_to_room("room_night_downstairs_stairs_2")
+			
+		"night_hallway_1_forward":
+			
+			PACBox.fade_to_room("room_night_hallway_2")
+			
+		"night_hallway_2_back":
+			
+			PACBox.fade_to_room("room_night_hallway_1")
+			
+		"night_hallway_2_forward":
+			
+			PACBox.fade_to_room("room_night_hallway_3")
+			
+		"night_hallway_2_to_study":
+			
+			PACBox.fade_to_room("room_night_study")
+			
+		"night_hallway_3_back":
+			
+			PACBox.fade_to_room("room_night_hallway_2")
+			
+		"night_hallway_3_forward":
+			
+			PACBox.fade_to_room("room_night_hallway_4")
+			
+		"night_hallway_4_back":
+			
+			PACBox.fade_to_room("room_night_hallway_3")
+			
+		"night_hallway_4_forward":
+			
+			PACBox.fade_to_room("room_night_hallway_5")
+			
+		"night_hallway_5_back":
+			
+			PACBox.fade_to_room("room_night_hallway_4")
+			
+		"night_hallway_5_left":
+			
+			PACBox.fade_to_room("room_night_hallway_6")
+			
+		"night_hallway_5_right":
+			
+			PACBox.fade_to_room("room_night_hallway_9")
+			
+		"night_hallway_6_back":
+			
+			PACBox.fade_to_room("room_night_hallway_5")
+			
+		"night_hallway_6_forward":
+			
+			PACBox.fade_to_room("room_night_hallway_7")
+			
+		"night_hallway_6_to_dining":
+			
+			PACBox.fade_to_room("room_night_dining")
+			
+		"night_hallway_7_back":
+			
+			PACBox.fade_to_room("room_night_hallway_6")
+			
+		"night_hallway_7_left":
+			
+			PACBox.fade_to_room("room_night_hallway_8")
+			
+		"night_hallway_8_back":
+			
+			PACBox.fade_to_room("room_night_hallway_7")
+			
+		"night_hallway_8_to_foyer":
+			
+			PACBox.fade_to_room("room_night_foyer")
+			
+		"night_hallway_9_back":
+			
+			PACBox.fade_to_room("room_night_hallway_5")
+			
+		"night_hallway_9_forward":
+			
+			PACBox.fade_to_room("room_night_hallway_10")
+			
+		"night_hallway_9_to_laundry":
+			
+			PACBox.fade_to_room("room_night_laundry")
+			
+		"night_hallway_10_back":
+			
+			PACBox.fade_to_room("room_night_hallway_9")
+			
+		"night_hallway_10_to_hallway_11":
+			
+			PACBox.fade_to_room("room_night_hallway_11")
+			
+		"night_hallway_11_back":
+			
+			PACBox.fade_to_room("room_night_hallway_10")
+			
+		"night_hallway_11_to_living_room":
+			
+			PACBox.fade_to_room("room_night_living_room")
+			
 		"DEFAULT":
 			
 			print("Default event invoked! Please define a custom event ID!")

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b4o8i0m3ab7b0"]
+
+[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_vrffn"]
+[ext_resource type="Texture2D" uid="uid://byykqhgnj1kes" path="res://assets/img/bg/night_hallway_dead_end.png" id="2_vrffn"]
+[ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_0huqb"]
+[ext_resource type="PackedScene" uid="uid://8okf1etb61n" path="res://scenes/clickers/doorway_clicker.tscn" id="4_ccrm1"]
+[ext_resource type="Texture2D" uid="uid://byb6ut3cxk3fb" path="res://assets/img/events/hallway_10_door.png" id="5_ctkhu"]
+
+[node name="NightHallway10" type="Node2D" unique_id=285811660]
+script = ExtResource("1_vrffn")
+display_name = "Hallways"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850041122]
+texture = ExtResource("2_vrffn")
+centered = false
+
+[node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="Back" parent="Clickers" unique_id=881771067 instance=ExtResource("3_0huqb")]
+position = Vector2(160, 220)
+event_id = "night_hallway_10_back"
+
+[node name="HallwayDoor" parent="Clickers" unique_id=1402531466 node_paths=PackedStringArray("hover_shape") instance=ExtResource("4_ccrm1")]
+position = Vector2(160, 120)
+still_image = ExtResource("5_ctkhu")
+hover_image = null
+hover_shape = NodePath("Polygon2D")
+event_id = "night_hallway_10_to_hallway_11"
+flag_id = "seen_night_foyer"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/HallwayDoor" unique_id=755841092]
+visible = false
+polygon = PackedVector2Array(62, -77, 77, -87, 77, 63, 62, 39)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/HallwayDoor" unique_id=995818233]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(76, -86, 63, -77, 63, 40, 76, 61)
