@@ -27,6 +27,7 @@ BGM="*uid://1v0xnsaqyipa"
 
 directories/dch_directory={}
 directories/dtl_directory={
+"911_call": "res://assets/text/911_call.dtl",
 "alt_hallway": "res://assets/text/alt_hallway.dtl",
 "between": "res://assets/text/between.dtl",
 "check_censored_photo": "res://assets/text/check_censored_photo.dtl",
