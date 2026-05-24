@@ -1,6 +1,7 @@
 extends Control
 
 @onready var player_node = $BGMPlayer
+@onready var pickup_node = $PickupPlayer
 
 @onready var daytime_bgm = preload("res://assets/audio/bgm/Forest_Ambience.mp3")
 @onready var nighttime_bgm = preload("res://assets/audio/bgm/Dark Loop.mp3")
@@ -20,4 +21,7 @@ func play_bg_sound() -> void:
 	player_node.play()
 
 func stop_bg_sound() -> void:
-	player_node.stop() 
+	player_node.stop()
+
+func play_pickup() -> void:
+	pickup_node.play()

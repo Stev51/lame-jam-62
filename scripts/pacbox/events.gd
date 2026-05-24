@@ -249,6 +249,8 @@ func call_event(id: String) -> void:
 			
 		"get_photos":
 			
+			BGM.play_pickup()
+			
 			PACBox.set_flag("got_photos")
 			
 			PACBox.gui_node.update_photo_place_goal_display()

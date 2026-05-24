@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1v0xnsaqyipa"]
 
 [ext_resource type="Script" uid="uid://ds7tiiuytw5ws" path="res://scripts/bgm.gd" id="1_q5y64"]
+[ext_resource type="AudioStream" uid="uid://c27f4yfpdwmkg" path="res://assets/audio/pick_up.mp3" id="2_3c3jb"]
 
 [node name="BGM" type="Control" unique_id=1223203295]
 layout_mode = 3
@@ -14,3 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_q5y64")
 
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="." unique_id=1552570902]
+
+[node name="PickupPlayer" type="AudioStreamPlayer" parent="." unique_id=502472788]
+stream = ExtResource("2_3c3jb")
+volume_db = -4.0
