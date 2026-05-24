@@ -11,6 +11,7 @@ position = Vector2(160, 120)
 texture = ExtResource("1_fgkus")
 
 [node name="MainScreen" type="Node2D" parent="." unique_id=1133000497]
+visible = false
 
 [node name="StartButton" type="Button" parent="MainScreen" unique_id=276654481]
 offset_left = 244.0
@@ -30,5 +31,32 @@ text = "Credits"
 
 [node name="CreditsScreen" type="Node2D" parent="." unique_id=1717659464]
 
+[node name="ColorRect" type="ColorRect" parent="CreditsScreen" unique_id=664070685]
+offset_right = 320.0
+offset_bottom = 240.0
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreditsScreen" unique_id=1221169362]
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 310.0
+offset_bottom = 203.0
+theme_override_font_sizes/normal_font_size = 12
+text = "Game by Stev51
+
+Special thanks to [PLACEHOLDER]
+
+Assets sourced from:
+	OpenGameArt, Pexels, Pixabay, pngimg.com, nicepng.com"
+
+[node name="BackButton" type="Button" parent="CreditsScreen" unique_id=1299573350]
+offset_left = 275.0
+offset_top = 205.0
+offset_right = 311.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 12
+text = "Back"
+
 [connection signal="pressed" from="MainScreen/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MainScreen/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CreditsScreen/BackButton" to="." method="_on_back_button_pressed"]
