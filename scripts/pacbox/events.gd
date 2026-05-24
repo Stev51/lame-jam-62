@@ -154,6 +154,10 @@ func call_event(id: String) -> void:
 			
 			PACBox.fade_to_room("room_day_study")
 			
+		"go_to_bed":
+			
+			pass
+			
 		"day_front_door":
 			
 			PACBox.queue_dialog("day_front_door")

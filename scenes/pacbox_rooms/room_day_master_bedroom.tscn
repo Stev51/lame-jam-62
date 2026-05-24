@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://caqtckb2bxmnt" path="res://assets/img/bg/day_master_bedroom.png" id="2_a3oiu"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="2_ifnyx"]
 [ext_resource type="PackedScene" uid="uid://h7xtp4xskcef" path="res://scenes/clickers/inspect_clicker.tscn" id="3_ifnyx"]
+[ext_resource type="PackedScene" uid="uid://coxckt01weaih" path="res://scenes/pacbox/clicker.tscn" id="5_k0u1j"]
 [ext_resource type="PackedScene" uid="uid://cau7cxqshoowf" path="res://scenes/clickers/photo_right_clicker.tscn" id="5_lo5bo"]
 [ext_resource type="PackedScene" uid="uid://bokfsryx8nyi4" path="res://scenes/clickers/frame_right_clicker.tscn" id="6_k0u1j"]
 
@@ -36,6 +37,21 @@ polygon = PackedVector2Array(-16, -62, -16, 56, 14, 38, 14, -55)
 visible = false
 color = Color(1, 1, 0, 0.19607843)
 polygon = PackedVector2Array(-15, -61, 14, -55, 13, 39, -16, 56)
+
+[node name="Bed" parent="Clickers" unique_id=2060557595 instance=ExtResource("5_k0u1j")]
+position = Vector2(156, 127)
+event_id = "go_to_bed"
+flag_id = "done_reading_article"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clickers/Bed" unique_id=1873055502]
+visible = false
+position = Vector2(-156, -127)
+polygon = PackedVector2Array(117, 89, 117, 112, 105, 119, 93, 131, 93, 142, 83, 150, 83, 154, 94, 154, 94, 167, 226, 167, 226, 154, 237, 154, 237, 149, 226, 142, 226, 130, 213, 118, 194, 109, 194, 89)
+
+[node name="Polygon2D" type="Polygon2D" parent="Clickers/Bed" unique_id=1939530541]
+visible = false
+color = Color(1, 1, 0, 0.19607843)
+polygon = PackedVector2Array(-39, -38, 38, -38, 38, -18, 57, -9, 70, 3, 70, 15, 81, 23, 81, 27, 70, 27, 70, 40, -62, 40, -62, 27, -73, 27, -73, 22, -63, 15, -63, 4, -51, -9, -39, -15)
 
 [node name="PhotoGroup" type="Node2D" parent="Clickers" unique_id=732117278]
 position = Vector2(293, 57)
