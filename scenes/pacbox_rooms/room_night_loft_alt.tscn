@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bwxl1bc3b6tel"]
 
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_trb8r"]
+[ext_resource type="Script" uid="uid://dmiu3qj38su7y" path="res://scripts/rooms/room_night_loft_alt.gd" id="1_617bg"]
 [ext_resource type="Texture2D" uid="uid://ce4mj3rwwbu5j" path="res://assets/img/bg/night_loft_alt.png" id="2_617bg"]
 
 [node name="NightLoftAlt" type="Node2D" unique_id=285811660]
-script = ExtResource("1_trb8r")
+script = ExtResource("1_617bg")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]
 texture = ExtResource("2_617bg")

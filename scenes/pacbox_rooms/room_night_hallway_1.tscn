@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://brakn0f8bq584"]
 
-[ext_resource type="Script" uid="uid://dq2x8ghkt1kfa" path="res://scripts/room.gd" id="1_xt7ja"]
+[ext_resource type="Script" uid="uid://cj7g565fmpgjf" path="res://scripts/rooms/room_night_hallway_1.gd" id="1_2gjuh"]
 [ext_resource type="Texture2D" uid="uid://bdj2al0ni8ssr" path="res://assets/img/bg/night_hallway_long.png" id="2_2gjuh"]
 [ext_resource type="PackedScene" uid="uid://du827lwfxfd8k" path="res://scenes/clickers/button_clicker.tscn" id="3_3w8dw"]
 
 [node name="NightHallway1" type="Node2D" unique_id=285811660]
-script = ExtResource("1_xt7ja")
+script = ExtResource("1_2gjuh")
 display_name = "Hallways"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=850041122]

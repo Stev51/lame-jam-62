@@ -3,9 +3,11 @@ extends Control
 @onready var player_node = $BGMPlayer
 
 @onready var daytime_bgm = preload("res://assets/audio/bgm/Forest_Ambience.mp3")
+@onready var nighttime_bgm = preload("res://assets/audio/bgm/Dark Loop.mp3")
 
 @onready var sound_ref = {
-	"daytime_bgm": daytime_bgm
+	"daytime_bgm": daytime_bgm,
+	"nighttime_bgm": nighttime_bgm
 }
 
 func switch_bg_sound(id: String) -> void:

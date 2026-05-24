@@ -21,6 +21,7 @@ var flags = {
 	"heard_done_dialog": false,
 	
 	"seen_night_stairs": false,
+	"seen_hallway_1": false,
 	"seen_hallway_4": false,
 	"seen_hallway_5": false,
 	"seen_night_foyer": false,
