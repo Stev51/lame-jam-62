@@ -22,6 +22,7 @@ FadeScreen="*uid://bhd7r43wes5iy"
 Dialogic="*uid://ds2q0uclmolvu"
 PhotoShower="*uid://dt8f7nj4u1oci"
 BGM="*uid://1v0xnsaqyipa"
+Global="*uid://ckhoivj5rnie4"
 
 [dialogic]
 
@@ -29,6 +30,7 @@ directories/dch_directory={}
 directories/dtl_directory={
 "911_call": "res://assets/text/911_call.dtl",
 "alt_hallway": "res://assets/text/alt_hallway.dtl",
+"alt_hallway_confusion": "res://assets/text/alt_hallway_confusion.dtl",
 "between": "res://assets/text/between.dtl",
 "check_censored_photo": "res://assets/text/check_censored_photo.dtl",
 "day_downstairs_bathroom": "res://assets/text/day_downstairs_bathroom.dtl",
@@ -48,6 +50,7 @@ directories/dtl_directory={
 "night_foyer": "res://assets/text/night_foyer.dtl",
 "night_living_room": "res://assets/text/night_living_room.dtl",
 "night_stairs": "res://assets/text/night_stairs.dtl",
+"night_try_to_sleep": "res://assets/text/night_try_to_sleep.dtl",
 "night_upstairs_hallway": "res://assets/text/night_upstairs_hallway.dtl",
 "placed_all_photos": "res://assets/text/placed_all_photos.dtl"
 }

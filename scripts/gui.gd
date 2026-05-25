@@ -6,6 +6,7 @@ extends Control
 @onready var photo_place_goal_text_node = $PhotoPlaceGoalDisplay/RichTextLabel
 @onready var quest_goal_node = $QuestGoalDisplay
 @onready var quest_goal_text_node = $QuestGoalDisplay/RichTextLabel
+@onready var quest_goal_anim_node = $QuestGoalDisplay/AnimationPlayer
 
 var location_showing = true
 var photo_placing = false
@@ -68,3 +69,6 @@ func unhide_quest_goal_display() -> void:
 
 func update_quest_text(text: String) -> void:
 	quest_goal_text_node.text = text
+
+func flash_quest_goal_display() -> void:
+	quest_goal_anim_node.play("blink")

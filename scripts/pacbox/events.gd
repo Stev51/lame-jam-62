@@ -146,6 +146,7 @@ func call_event(id: String) -> void:
 			
 			PACBox.gui_node.update_quest_text("Go to the Office")
 			PACBox.gui_node.enable_quest_goal_display()
+			PACBox.gui_node.flash_quest_goal_display()
 			
 		"use_laptop":
 			
@@ -184,8 +185,6 @@ func call_event(id: String) -> void:
 		"done_using_laptop":
 			
 			PACBox.set_flag("done_reading_article", true)
-			PACBox.gui_node.update_quest_text("Go to Bed")
-			
 			PACBox.fade_to_room("room_day_study")
 			
 		"go_to_bed":
@@ -522,7 +521,10 @@ func call_event(id: String) -> void:
 			
 		"night_upstairs_hallway_4_to_master_bedroom":
 			
-			PACBox.fade_to_room("room_night_master_bedroom")
+			if not PACBox.get_flag("seen_hallway_1"):
+				PACBox.fade_to_room("room_night_master_bedroom")
+			else:
+				PACBox.queue_dialog("night_try_to_sleep")
 			
 		"night_bedroom_1_back":
 			

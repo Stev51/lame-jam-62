@@ -2,10 +2,59 @@
 
 [ext_resource type="Script" uid="uid://cboqn4yib2hrd" path="res://scripts/end_screen.gd" id="1_6e1uj"]
 [ext_resource type="Texture2D" uid="uid://wwws27itshnc" path="res://assets/img/end_screen.png" id="1_kq7ac"]
+[ext_resource type="AudioStream" uid="uid://blxcwaefxwqik" path="res://assets/audio/bgm/crickets.mp3" id="3_jc7ji"]
 
 [node name="EndScreen" type="Node2D" unique_id=1819362098]
 script = ExtResource("1_6e1uj")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=535412074]
+[node name="Background" type="Sprite2D" parent="." unique_id=535412074]
 position = Vector2(160, 120)
 texture = ExtResource("1_kq7ac")
+
+[node name="CreditsButton" type="Button" parent="." unique_id=1413002455]
+offset_left = 259.0
+offset_top = 199.0
+offset_right = 309.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 12
+text = "Credits"
+
+[node name="CreditsScreen" type="Node2D" parent="." unique_id=1031977361]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CreditsScreen" unique_id=2032686275]
+offset_right = 320.0
+offset_bottom = 240.0
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreditsScreen" unique_id=1173173186]
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 310.0
+offset_bottom = 203.0
+theme_override_font_sizes/normal_font_size = 12
+text = "Game by Stev51
+
+Special thanks to Alana Patton and Conor Patton
+
+Assets sourced from:
+	OpenGameArt, Pexels, Pixabay, pngimg.com, nicepng.com
+
+
+The End,
+Thanks for playing!!!"
+
+[node name="BackButton" type="Button" parent="CreditsScreen" unique_id=837578402]
+offset_left = 275.0
+offset_top = 205.0
+offset_right = 311.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 12
+text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=57728357]
+stream = ExtResource("3_jc7ji")
+volume_db = -5.0
+
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CreditsScreen/BackButton" to="." method="_on_back_button_pressed"]

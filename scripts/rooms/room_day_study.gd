@@ -12,6 +12,9 @@ func _ready() -> void:
 		PACBox.queue_dialog("done_reading_article")
 		PACBox.set_flag("heard_done_dialog", true)
 		
+		PACBox.gui_node.update_quest_text("Go to Bed")
+		PACBox.gui_node.flash_quest_goal_display()
+		
 		PACBox.gui_node.unhide_room_text_display()
 		PACBox.gui_node.unhide_photo_place_goal_display()
 		PACBox.gui_node.unhide_quest_goal_display()
