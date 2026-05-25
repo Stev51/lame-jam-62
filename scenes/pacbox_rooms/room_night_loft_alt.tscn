@@ -2,6 +2,48 @@
 
 [ext_resource type="Script" uid="uid://dmiu3qj38su7y" path="res://scripts/rooms/room_night_loft_alt.gd" id="1_617bg"]
 [ext_resource type="Texture2D" uid="uid://ce4mj3rwwbu5j" path="res://assets/img/bg/night_loft_alt.png" id="2_617bg"]
+[ext_resource type="Texture2D" uid="uid://nh5n5pvsbsn1" path="res://assets/img/end_frames/1.png" id="3_h75e3"]
+[ext_resource type="Texture2D" uid="uid://duc1f464b3t6g" path="res://assets/img/end_frames/2.png" id="4_k5sc8"]
+[ext_resource type="Texture2D" uid="uid://cfak5fgfylc2c" path="res://assets/img/end_frames/3.png" id="5_8pqh7"]
+[ext_resource type="Texture2D" uid="uid://dilrbbxp413xn" path="res://assets/img/end_frames/4.png" id="6_24hqp"]
+[ext_resource type="Texture2D" uid="uid://ky8bgvn3xk02" path="res://assets/img/end_frames/5.png" id="7_6sfke"]
+[ext_resource type="Texture2D" uid="uid://ddx8y1punh0c0" path="res://assets/img/end_frames/6.png" id="8_i0voo"]
+[ext_resource type="Texture2D" uid="uid://bs0sw30c4dwla" path="res://assets/img/end_frames/7.png" id="9_appgh"]
+[ext_resource type="AudioStream" uid="uid://dnoxu7kcf7a8w" path="res://assets/audio/tone.mp3" id="10_k5sc8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_duf32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_h75e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k5sc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8pqh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_24hqp")
+}],
+"loop": false,
+"name": &"part1",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6sfke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i0voo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_appgh")
+}],
+"loop": false,
+"name": &"part2",
+"speed": 0.5
+}]
 
 [node name="NightLoftAlt" type="Node2D" unique_id=285811660]
 script = ExtResource("1_617bg")
@@ -11,3 +53,13 @@ texture = ExtResource("2_617bg")
 centered = false
 
 [node name="Clickers" type="Node2D" parent="." unique_id=1752323861]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=492567414]
+position = Vector2(160, 120)
+sprite_frames = SubResource("SpriteFrames_duf32")
+animation = &"part1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1869945310]
+stream = ExtResource("10_k5sc8")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -494,7 +494,7 @@ func call_event(id: String) -> void:
 				
 				PACBox.gui_node.disable_room_text_display()
 				
-				PACBox.fade_to_room("room_night_loft_alt")
+				PACBox.slow_fade_to_room("room_night_loft_alt")
 			
 		"night_upstairs_hallway_2_back":
 			
